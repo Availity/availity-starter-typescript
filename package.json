@@ -71,7 +71,8 @@
     "cross-env": "^5.1.4",
     "eslint-config-availity": "^5.2.1",
     "history": "^4.9.0"
-  },
+  },  
+  "availityWorkflow": true,
   "lint-staged": {
     "*.js": [
       "prettier --write",
