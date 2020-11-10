@@ -1,1 +1,3 @@
 extends: availity/workflow
+rules:
+  import/extensions: 0

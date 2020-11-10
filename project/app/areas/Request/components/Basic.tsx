@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Card, CardTitle } from 'reactstrap';
 import { AvOrganizationSelect, AvProviderSelect } from '@availity/select/resources';
-import { requiredValidation } from '../../../shared';
+import { requiredValidation } from '@/shared';
 
-type OrganizationType = {
+type Organization = {
   customerId: string;
 };
 
-const Basic: React.SFC = () => {
+const Basic = (): JSX.Element => {
   const [customerId, setCustomerId] = useState<string | null>(null);
 
   return (
@@ -17,7 +17,7 @@ const Basic: React.SFC = () => {
         name="organization"
         label="Organization"
         validate={requiredValidation}
-        onChange={({ customerId }: OrganizationType) => setCustomerId(customerId)}
+        onChange={({ customerId }: Organization) => setCustomerId(customerId)}
       />
       <AvProviderSelect name="provider" label="Provider" customerId={customerId} />
     </Card>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardTitle, Row, Badge } from 'reactstrap';
 import ResponseField from './ResponseField';
 
-const Transaction: React.SFC = () => (
+const Transaction = (): JSX.Element => (
   <Card className="mb-3" body>
     <CardTitle className="card-title-secondary">
       <small className="text-label text-label-inline">Transaction ID</small> <Badge color="success">966343462</Badge>

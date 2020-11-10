@@ -1,15 +1,12 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { Col } from 'reactstrap';
+import { Col, ColProps } from 'reactstrap';
 
-interface ResponseProps extends React.HTMLAttributes<HTMLDivElement> {
-  [key: string]: any;
+interface Props extends ColProps {
   label?: string;
-  value?: any;
-  tag?: string | React.ReactType;
+  value?: string;
 }
 
-const ResponseField: React.SFC<ResponseProps> = ({ label, value, children, ...rest }) => (
+const ResponseField = ({ label, value, children, ...rest }: Props): JSX.Element => (
   <Col {...rest}>
     <h5 className="text-label">{label}</h5>
     <p>{children || value}</p>

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Card, CardTitle, Row } from 'reactstrap';
 import ResponseField from './ResponseField';
 
-const Claim: React.SFC = () => (
+const Claim = (): JSX.Element => (
   <Card className="mb-3" body>
     <CardTitle className="card-title-secondary">Claim Information</CardTitle>
     <Row>

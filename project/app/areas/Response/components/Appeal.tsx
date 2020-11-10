@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardTitle, Row } from 'reactstrap';
 import ResponseField from './ResponseField';
 
-const Appeal: React.SFC = () => (
+const Appeal = (): JSX.Element => (
   <Card body className="mb-3">
     <CardTitle className="card-title-secondary">Appeal Information</CardTitle>
     <Row>
