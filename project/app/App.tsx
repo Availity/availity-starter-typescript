@@ -4,8 +4,7 @@ import { Container } from 'reactstrap';
 import Spaces from '@availity/spaces';
 import PageHeader from '@availity/page-header';
 import qs from 'query-string';
-import Request from './areas/Request';
-import Response from './areas/Response';
+import { Request, Response } from './areas';
 import { Footer } from './shared';
 
 const App = (): JSX.Element => {

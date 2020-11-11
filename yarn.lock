@@ -1574,15 +1574,6 @@
     source-map "^0.6.1"
     write-file-atomic "^3.0.0"
 
-"@jest/types@^24.9.0":
-  version "24.9.0"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@jest/types/-/types-24.9.0.tgz#63cb26cb7500d069e5a389441a7c6ab5e909fc59"
-  integrity sha1-Y8smy3UA0Gnlo4lEGnxqtekJ/Fk=
-  dependencies:
-    "@types/istanbul-lib-coverage" "^2.0.0"
-    "@types/istanbul-reports" "^1.1.1"
-    "@types/yargs" "^13.0.0"
-
 "@jest/types@^26.6.2":
   version "26.6.2"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@jest/types/-/types-26.6.2.tgz#bef5a532030e1d88a2f5a6d933f84e97226ed48e"
@@ -1818,14 +1809,6 @@
   dependencies:
     "@types/istanbul-lib-coverage" "*"
 
-"@types/istanbul-reports@^1.1.1":
-  version "1.1.2"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/istanbul-reports/-/istanbul-reports-1.1.2.tgz#e875cc689e47bce549ec81f3df5e6f6f11cfaeb2"
-  integrity sha1-6HXMaJ5HvOVJ7IHz315vbxHPrrI=
-  dependencies:
-    "@types/istanbul-lib-coverage" "*"
-    "@types/istanbul-lib-report" "*"
-
 "@types/istanbul-reports@^3.0.0":
   version "3.0.0"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/istanbul-reports/-/istanbul-reports-3.0.0.tgz#508b13aa344fa4976234e75dddcc34925737d821"
@@ -1833,20 +1816,13 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*":
+"@types/jest@*", "@types/jest@^26.0.15":
   version "26.0.15"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/jest/-/jest-26.0.15.tgz#12e02c0372ad0548e07b9f4e19132b834cb1effe"
   integrity sha1-EuAsA3KtBUjge59OGRMrg0yx7/4=
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
-
-"@types/jest@^24.0.18":
-  version "24.9.1"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/jest/-/jest-24.9.1.tgz#02baf9573c78f1b9974a5f36778b366aa77bd534"
-  integrity sha1-Arr5Vzx48bmXSl82d4s2aqd71TQ=
-  dependencies:
-    jest-diff "^24.3.0"
 
 "@types/json-schema@*", "@types/json-schema@^7.0.3", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.6":
   version "7.0.6"
@@ -1997,13 +1973,6 @@
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/yargs-parser/-/yargs-parser-15.0.0.tgz#cb3f9f741869e20cce330ffbeb9271590483882d"
   integrity sha1-yz+fdBhp4gzOMw/765JxWQSDiC0=
 
-"@types/yargs@^13.0.0":
-  version "13.0.11"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/yargs/-/yargs-13.0.11.tgz#def2f0c93e4bdf2c61d7e34899b17e34be28d3b1"
-  integrity sha1-3vLwyT5L3yxh1+NImbF+NL4o07E=
-  dependencies:
-    "@types/yargs-parser" "*"
-
 "@types/yargs@^15.0.0":
   version "15.0.9"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/yargs/-/yargs-15.0.9.tgz#524cd7998fe810cdb02f26101b699cccd156ff19"
@@ -2011,10 +1980,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@types/yup@^0.26.24":
-  version "0.26.37"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/yup/-/yup-0.26.37.tgz#7a52854ac602ba0dc969bebc960559f7464a1686"
-  integrity sha1-elKFSsYCug3Jab68lgVZ90ZKFoY=
+"@types/yup@^0.29.9":
+  version "0.29.9"
+  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/@types/yup/-/yup-0.29.9.tgz#e2015187ae5739fd3b791b3b7ab9094f2aa5a474"
+  integrity sha1-4gFRh65XOf07eRs7erkJTyqlpHQ=
 
 "@typescript-eslint/eslint-plugin@^4.7.0":
   version "4.7.0"
@@ -2364,7 +2333,7 @@ ansi-regex@^3.0.0:
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
   integrity sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
 
-ansi-regex@^4.0.0, ansi-regex@^4.1.0:
+ansi-regex@^4.1.0:
   version "4.1.0"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/ansi-regex/-/ansi-regex-4.1.0.tgz#8b9f8f08cf1acb843756a839ca8c7e3168c51997"
   integrity sha1-i5+PCM8ay4Q3Vqg5yox+MWjFGZc=
@@ -2662,20 +2631,12 @@ axe-core@^4.0.2:
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/axe-core/-/axe-core-4.0.2.tgz#c7cf7378378a51fcd272d3c09668002a4990b1cb"
   integrity sha1-x89zeDeKUfzSctPAlmgAKkmQscs=
 
-axios@*:
+axios@*, axios@^0.21.0:
   version "0.21.0"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/axios/-/axios-0.21.0.tgz#26df088803a2350dff2c27f96fef99fe49442aca"
   integrity sha1-Jt8IiAOiNQ3/LCf5b++Z/klEKso=
   dependencies:
     follow-redirects "^1.10.0"
-
-axios@^0.18.0:
-  version "0.18.1"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/axios/-/axios-0.18.1.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
-  integrity sha1-/z8N4ue10YDnV62YAA8Qgbh7zqM=
-  dependencies:
-    follow-redirects "1.5.10"
-    is-buffer "^2.0.2"
 
 axobject-query@^2.2.0:
   version "2.2.0"
@@ -3506,7 +3467,7 @@ chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.4.1, chalk@^2.4.2:
+chalk@^2.0.0, chalk@^2.3.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha1-zUJUFnelQzPPVBpJEIwUMrRMlCQ=
@@ -4104,12 +4065,12 @@ create-react-context@^0.3.0:
     gud "^1.0.0"
     warning "^4.0.3"
 
-cross-env@^5.1.4:
-  version "5.2.1"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/cross-env/-/cross-env-5.2.1.tgz#b2c76c1ca7add66dc874d11798466094f551b34d"
-  integrity sha1-ssdsHKet1m3IdNEXmEZglPVRs00=
+cross-env@^7.0.2:
+  version "7.0.2"
+  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/cross-env/-/cross-env-7.0.2.tgz#bd5ed31339a93a3418ac4f3ca9ca3403082ae5f9"
+  integrity sha1-vV7TEzmpOjQYrE88qco0Awgq5fk=
   dependencies:
-    cross-spawn "^6.0.5"
+    cross-spawn "^7.0.1"
 
 cross-spawn@^3.0.0:
   version "3.0.1"
@@ -4119,7 +4080,7 @@ cross-spawn@^3.0.0:
     lru-cache "^4.0.1"
     which "^1.2.9"
 
-cross-spawn@^6.0.0, cross-spawn@^6.0.5:
+cross-spawn@^6.0.0:
   version "6.0.5"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
   integrity sha1-Sl7Hxk364iw6FBJNus3uhG2Ay8Q=
@@ -4441,7 +4402,7 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@3.1.0, debug@=3.1.0:
+debug@3.1.0:
   version "3.1.0"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   integrity sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
@@ -4648,11 +4609,6 @@ dicer@0.3.0:
   integrity sha1-6s2Ys7+/kuirXC/bcaqsRLsGuHI=
   dependencies:
     streamsearch "0.1.2"
-
-diff-sequences@^24.9.0:
-  version "24.9.0"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/diff-sequences/-/diff-sequences-24.9.0.tgz#5715d6244e2aa65f48bba0bc972db0b0b11e95b5"
-  integrity sha1-VxXWJE4qpl9Iu6C8ly2wsLEelbU=
 
 diff-sequences@^26.6.2:
   version "26.6.2"
@@ -5822,13 +5778,6 @@ fn-name@~3.0.0:
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/fn-name/-/fn-name-3.0.0.tgz#0596707f635929634d791f452309ab41558e3c5c"
   integrity sha1-BZZwf2NZKWNNeR9FIwmrQVWOPFw=
 
-follow-redirects@1.5.10:
-  version "1.5.10"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
-  integrity sha1-e3qfmuov3/NnhqlP9kPtB/T/Xio=
-  dependencies:
-    debug "=3.1.0"
-
 follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   version "1.13.0"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
@@ -6850,11 +6799,6 @@ is-buffer@^1.1.4, is-buffer@^1.1.5:
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha1-76ouqdqg16suoTqXsritUf776L4=
 
-is-buffer@^2.0.2:
-  version "2.0.5"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/is-buffer/-/is-buffer-2.0.5.tgz#ebc252e400d22ff8d77fa09888821a24a658c191"
-  integrity sha1-68JS5ADSL/jXf6CYiIIaJKZYwZE=
-
 is-callable@^1.1.4, is-callable@^1.2.2:
   version "1.2.2"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/is-callable/-/is-callable-1.2.2.tgz#c7c6715cd22d4ddb48d3e19970223aceabb080d9"
@@ -7350,16 +7294,6 @@ jest-config@^26.6.3:
     micromatch "^4.0.2"
     pretty-format "^26.6.2"
 
-jest-diff@^24.3.0:
-  version "24.9.0"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/jest-diff/-/jest-diff-24.9.0.tgz#931b7d0d5778a1baf7452cb816e325e3724055da"
-  integrity sha1-kxt9DVd4obr3RSy4FuMl43JAVdo=
-  dependencies:
-    chalk "^2.0.1"
-    diff-sequences "^24.9.0"
-    jest-get-type "^24.9.0"
-    pretty-format "^24.9.0"
-
 jest-diff@^26.0.0, jest-diff@^26.6.2:
   version "26.6.2"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/jest-diff/-/jest-diff-26.6.2.tgz#1aa7468b52c3a68d7d5c5fdcdfcd5e49bd164394"
@@ -7412,11 +7346,6 @@ jest-environment-node@^26.6.2:
     "@types/node" "*"
     jest-mock "^26.6.2"
     jest-util "^26.6.2"
-
-jest-get-type@^24.9.0:
-  version "24.9.0"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/jest-get-type/-/jest-get-type-24.9.0.tgz#1684a0c8a50f2e4901b6644ae861f579eed2ef0e"
-  integrity sha1-FoSgyKUPLkkBtmRK6GH1ee7S7w4=
 
 jest-get-type@^26.3.0:
   version "26.3.0"
@@ -10252,16 +10181,6 @@ pretty-error@^2.1.1:
     lodash "^4.17.20"
     renderkid "^2.0.4"
 
-pretty-format@^24.9.0:
-  version "24.9.0"
-  resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/pretty-format/-/pretty-format-24.9.0.tgz#12fac31b37019a4eea3c11aa9a959eb7628aa7c9"
-  integrity sha1-EvrDGzcBmk7qPBGqmpWet2KKp8k=
-  dependencies:
-    "@jest/types" "^24.9.0"
-    ansi-regex "^4.0.0"
-    ansi-styles "^3.2.0"
-    react-is "^16.8.4"
-
 pretty-format@^26.0.0, pretty-format@^26.6.2:
   version "26.6.2"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/pretty-format/-/pretty-format-26.6.2.tgz#e35c2705f14cb7fe2fe94fa078345b444120fc93"
@@ -10319,7 +10238,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@15.7.2, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -10583,7 +10502,7 @@ react-input-autosize@^2.2.2:
   dependencies:
     prop-types "^15.5.8"
 
-react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
+react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.6:
   version "16.13.1"
   resolved "https://packages.availity.com/artifactory/api/npm/availity-npm-all/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
