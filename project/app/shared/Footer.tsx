@@ -8,7 +8,7 @@ const Footer = (): JSX.Element => (
     <Link className="mx-1" href="https://www.availity.com" target="_blank">
       Availity
     </Link>
-    2019
+    2020
   </p>
 );
 
