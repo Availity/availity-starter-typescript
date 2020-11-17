@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { useToggle } from '@availity/hooks';
 import ResponseField from './ResponseField';
 
-const Provider:React.SFC = () => {
+const Provider = (): JSX.Element => {
   const [collapsed, toggleCollapse] = useToggle(false);
 
   return (

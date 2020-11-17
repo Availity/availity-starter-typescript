@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardTitle, InputGroup, InputGroupAddon, Label, InputGroupText, Row, Col } from 'reactstrap';
 import { Field, Input, FormGroup, Feedback } from '@availity/form';
-import { requiredValidation } from '../../../shared';
+import { requiredValidation } from '@/shared';
 
-const Information: React.SFC = () => (
+const Information = (): JSX.Element => (
   <Card body className="mb-3">
     <CardTitle className="card-title-secondary">Claim Information</CardTitle>
     <Field name="memberId" label="Member ID" type="text" validate={requiredValidation} />

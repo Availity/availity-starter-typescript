@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, waitForElement, RenderResult } from '@testing-library/react';
+import { render, cleanup, waitFor, RenderResult } from '@testing-library/react';
 import { createBrowserHistory } from 'history';
 import axios from 'axios';
 import { Router } from 'react-router-dom';
@@ -29,7 +29,7 @@ const renderApp = async (): Promise<RenderResult> => {
     </Router>
   );
 
-  await waitForElement(() => container.querySelector('#app-container'));
+  await waitFor(() => container.querySelector('#app-container'));
 
   return { container, ...rest };
 };
@@ -38,10 +38,10 @@ afterEach(() => {
   cleanup();
 });
 
-describe('Authorizations', () => {
+describe('App', () => {
   test('renders', async () => {
     const { getByText } = await renderApp();
 
-    await waitForElement(() => getByText('My Health Plan'));
+    await waitFor(() => expect(getByText('My Health Plan')).toBeDefined());
   });
 });

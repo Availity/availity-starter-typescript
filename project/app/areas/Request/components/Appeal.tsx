@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card, CardTitle, Input as RsInput } from 'reactstrap';
+import { Card, CardTitle } from 'reactstrap';
 import { Input, RadioGroup, Radio } from '@availity/form';
 
-const Appeal: React.SFC = () => (
+const Appeal = (): JSX.Element => (
   <Card body className="mb-3">
     <CardTitle className="card-title-secondary">Appeal Reason</CardTitle>
     <RadioGroup name="appealReason" inline>
