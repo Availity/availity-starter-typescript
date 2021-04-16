@@ -1,5 +1,5 @@
 {
-  "name": "availity-starter-complex",
+  "name": "availity-starter-typescript",
   "private": true,
   "version": "0.1.0",
   "description": "React project using @availity/workflow",
