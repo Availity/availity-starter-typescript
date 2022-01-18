@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardTitle, Row, Badge } from 'reactstrap';
+
 import ResponseField from './ResponseField';
 
 const Transaction = (): JSX.Element => (

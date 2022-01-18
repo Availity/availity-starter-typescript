@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardTitle, Row } from 'reactstrap';
+
 import ResponseField from './ResponseField';
 
 const Contact = (): JSX.Element => (

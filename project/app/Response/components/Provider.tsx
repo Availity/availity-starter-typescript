@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardTitle, CardBody, Row, Collapse, Button } from 'reactstrap';
 import classnames from 'classnames';
 import { useToggle } from '@availity/hooks';
+
 import ResponseField from './ResponseField';
 
 const Provider = (): JSX.Element => {
@@ -10,6 +11,7 @@ const Provider = (): JSX.Element => {
   return (
     <Card body className="mb-3">
       <CardTitle className="card-title-secondary">Provider Information</CardTitle>
+
       <Row>
         <ResponseField label="Requesting Provider" value="Rodriguez, Brandon" sm="3" />
         <ResponseField label="Referred-To-Provider" value="Riviera, Nick" sm="3" />
@@ -17,7 +19,6 @@ const Provider = (): JSX.Element => {
 
       <Card className="card-collapsible">
         <h5 className="card-header">
-          {' '}
           <Button
             className={classnames({
               'card-collapsible-link': true,

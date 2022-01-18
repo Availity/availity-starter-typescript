@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Alert } from 'reactstrap';
+
 import { Appeal, Claim, Contact, Provider, Transaction } from './components';
 
 const Response = (): JSX.Element => (
   <>
     <Alert color="success" className="d-flex align-items-center justify-content-between">
       Your Appeal has been submitted.
-      <Button color="dark" className="ml-1" onClick={() => window.print()}>
-        Print Copy
+      <Button color="light" className="ml-1" onClick={() => window.print()}>
+        Print
       </Button>
     </Alert>
     <Transaction />
