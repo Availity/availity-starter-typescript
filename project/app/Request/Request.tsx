@@ -1,20 +1,23 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { Form } from '@availity/form';
 import * as yup from 'yup';
+
 import { Basic, Information, Appeal } from './components';
 
 const schema = yup.object().shape({
-  memberId: yup.string().required('This field is required.'),
+  memberId: yup.string().required(),
+  claimId: yup.string().required(),
+  organization: yup.object().required(),
 });
 
 const Request = (): JSX.Element => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <Form
-      onSubmit={() => history.push(`response`)}
+      onSubmit={() => navigate('/response')}
       initialValues={{
         organization: undefined,
         provider: undefined,

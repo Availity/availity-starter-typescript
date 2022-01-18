@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Card, CardTitle, Row } from 'reactstrap';
+
 import ResponseField from './ResponseField';
 
 const Claim = (): JSX.Element => (

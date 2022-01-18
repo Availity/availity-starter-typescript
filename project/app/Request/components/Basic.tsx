@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Card, CardTitle } from 'reactstrap';
 import { AvOrganizationSelect, AvProviderSelect } from '@availity/select/resources';
-import { requiredValidation } from '@/shared';
 
 type Organization = {
   customerId: string;
 };
 
 const Basic = (): JSX.Element => {
-  const [customerId, setCustomerId] = useState<string | null>(null);
+  const [customerId, setCustomerId] = useState<string>();
 
   return (
     <Card body className="mb-3">
@@ -16,7 +15,6 @@ const Basic = (): JSX.Element => {
       <AvOrganizationSelect
         name="organization"
         label="Organization"
-        validate={requiredValidation}
         onChange={({ customerId }: Organization) => setCustomerId(customerId)}
       />
       <AvProviderSelect name="provider" label="Provider" customerId={customerId} />

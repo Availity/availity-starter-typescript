@@ -1,5 +1,5 @@
 {
-  "ms/api/availity/internal/spc/slotmachine/graphql": {
-    "file": "slotmachine.json"
+  "/ms/api/availity/internal/spc/web/graphql": {
+    "file": "spaces.json"
   }
 }

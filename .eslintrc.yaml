@@ -1,3 +1,4 @@
 extends: availity/workflow
 rules:
+  jest/expect-expect: 0
   import/extensions: 0
