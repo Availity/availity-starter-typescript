@@ -9,7 +9,7 @@ import App from './App';
 jest.mock('axios');
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const axiosMock = axios as any;
+const axiosMock =  axios as jest.Mocked<typeof axios>;
 
 describe('App', () => {
   test('renders', async () => {
