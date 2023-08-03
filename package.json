@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@availity/mock-server": "^7.2.3",
-    "@availity/workflow": "^9.5.3-alpha.5",
+    "@availity/workflow": "^9.5.3-alpha.6",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
