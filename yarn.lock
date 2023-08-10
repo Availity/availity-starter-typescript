@@ -166,40 +166,17 @@
   resolved "https://registry.yarnpkg.com/@availity/message-core/-/message-core-6.1.0.tgz#8fa2d5306b760b8a6a5241dfc6e24ac099f82d00"
   integrity sha512-ifmApn6gtlWqrVYZs3H4JazjcOWFwRs+VKGDIDa1HGoDy3eSRe7/LQhkNjr0PyI+fJPDj63fJSsN2zXIMFWyxA==
 
-"@availity/mock-data@5.6.0":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@availity/mock-data/-/mock-data-5.6.0.tgz#d516c89ccacc33323b773e1d1c18e4c93b60de20"
-  integrity sha512-14KfrX0YMJtxJjAKyR09mddDQNcLqjCo6E0DGsQviLemGyYXVjuoC1AdbIIzHl+DIhk+ygSXvG2xhR4c5res2Q==
+"@availity/mock-data@6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@availity/mock-data/-/mock-data-6.0.0.tgz#80a41dd4e24d702b406c1b6d5f7b28a06207f3d7"
+  integrity sha512-dlOy+6kp3RbYjxMLqM5F0x8RTItdZKYykFEkSjPrRN0tAJTQ3AjjbHF/NAfnVXlqPZYnZBPSoB5ojinb3LC2OQ==
 
-"@availity/mock-data@5.6.2-alpha.0":
-  version "5.6.2-alpha.0"
-  resolved "https://registry.yarnpkg.com/@availity/mock-data/-/mock-data-5.6.2-alpha.0.tgz#b1f2b54bc485c03e3dbdecfb91bca34df53640ac"
-  integrity sha512-lzyasCciz1V+hUjLpKs+bA7j2mt9kntYEY0Vg24r2MA37Cf8+/zCBi2+x5NpK/RIH8uYxAbHu2vqLcXds08SFA==
-
-"@availity/mock-server@7.2.4-alpha.0":
-  version "7.2.4-alpha.0"
-  resolved "https://registry.yarnpkg.com/@availity/mock-server/-/mock-server-7.2.4-alpha.0.tgz#b8811ce773bf970000ed9f33e3412a3ec024bae7"
-  integrity sha512-CYMAqbfGxTtfVfJtR8r+NnSlJo/kN5CEGba3GoCRTpTNb3EJFbT20fhE7P7ST0Q53m7FFCUdmH4gZ/+ks1g0aQ==
+"@availity/mock-server@8.0.0", "@availity/mock-server@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@availity/mock-server/-/mock-server-8.0.0.tgz#81a1e061d2421e21c103d09e32e4f78a172b5b0d"
+  integrity sha512-OxZRRrnwQ2IRbXiMNwcM2o3oJgtz5un7/RIG/XL9K6rRqnroLxPmUTFPJcXkgrLu2y+fDW86PPD8veMHVS86Cg==
   dependencies:
-    "@availity/mock-data" "5.6.2-alpha.0"
-    body-parser "^1.20.2"
-    chalk "^4.1.2"
-    compression "^1.7.4"
-    connect-busboy "1.0.0"
-    cors "^2.8.5"
-    delay "^5.0.0"
-    errorhandler "^1.5.1"
-    express "^4.18.2"
-    lodash "^4.17.21"
-    method-override "^3.0.0"
-    on-finished "^2.4.1"
-
-"@availity/mock-server@^7.2.3":
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/@availity/mock-server/-/mock-server-7.2.3.tgz#33a7c8971ec14dbe264f4c53076e9004b9f56b8f"
-  integrity sha512-WOL6eppx7Gl1lbSBIirIR9vPv5ptJswB1ij2cvyyMYexOtwNAogp1dcVjapwFoO/tbfRJehDiQp0cL42CvvZuw==
-  dependencies:
-    "@availity/mock-data" "5.6.0"
+    "@availity/mock-data" "6.0.0"
     body-parser "^1.20.2"
     chalk "^4.1.2"
     compression "^1.7.4"
@@ -287,23 +264,23 @@
     classnames "^2.3.1"
     prop-types "^15.8.1"
 
-"@availity/workflow-logger@5.7.3-alpha.0":
-  version "5.7.3-alpha.0"
-  resolved "https://registry.yarnpkg.com/@availity/workflow-logger/-/workflow-logger-5.7.3-alpha.0.tgz#a01d521ff1f4ff2278ad9590a589b2ea8d544d47"
-  integrity sha512-NED/ul8BfGV/sIoL+MU9hfwdd0ZngfF2w/9zRF1N2e5eP1FDJ7HKKwfoSPn4W2jnQPQy/cHaRq+x/v9Q4VyZXA==
+"@availity/workflow-logger@6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@availity/workflow-logger/-/workflow-logger-6.0.0.tgz#e5f2bacdf81ad2ccb3f20b972de7a6fcba4ab77d"
+  integrity sha512-q5joOpQfO/8t3/DCRDdeZhmAlSBjDgCSiqnJ2YvDj9ZXYIw1Skd0vkv3msC0SrK/IGC2wW+cAiv2Ta7mNClv9Q==
   dependencies:
     boxen "^5.1.2"
     chalk "^4.1.2"
     dateformat "^4.6.3"
     figures "^3.2.0"
 
-"@availity/workflow@^9.5.3-alpha.6":
-  version "9.5.3-alpha.6"
-  resolved "https://registry.yarnpkg.com/@availity/workflow/-/workflow-9.5.3-alpha.6.tgz#3b020b42014c13b4bd3680259b63ce35a0a3f1a4"
-  integrity sha512-L+U9FOSuc2dihe4B77gbNdlXjuLhwnAv4hfAJg2yhtYAOx4xy1+wzFGCxwFILEsF3qu0HRu0A+2LXPdIYq30fQ==
+"@availity/workflow@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@availity/workflow/-/workflow-10.0.0.tgz#2b86a0848f28b20addb13e7c389ea5124a1e650f"
+  integrity sha512-vw8NFNYwkjs/h1sEjmHSjaM7w7Y2HV80HwbX/lQa0NW/BVDW5PveXbQQ7PG8Tnxfwh3BT4ed4AQyty5DbZyntQ==
   dependencies:
-    "@availity/mock-server" "7.2.4-alpha.0"
-    "@availity/workflow-logger" "5.7.3-alpha.0"
+    "@availity/mock-server" "8.0.0"
+    "@availity/workflow-logger" "6.0.0"
     "@babel/core" "^7.22.9"
     "@babel/plugin-proposal-decorators" "^7.22.7"
     "@babel/runtime" "^7.22.6"
@@ -372,6 +349,7 @@
     shelljs "^0.8.5"
     style-loader "^3.3.3"
     terser-webpack-plugin "^5.3.9"
+    tsconfig-paths-webpack-plugin "^4.1.0"
     type-is "^1.6.18"
     update-notifier "^5.1.0"
     url-join "^4.0.1"
@@ -3055,10 +3033,15 @@
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
   integrity sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==
 
-"@types/node@*", "@types/node@^20.4.5":
+"@types/node@*":
   version "20.4.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.5.tgz#9dc0a5cb1ccce4f7a731660935ab70b9c00a5d69"
   integrity sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==
+
+"@types/node@^20.4.9":
+  version "20.4.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.9.tgz#c7164e0f8d3f12dfae336af0b1f7fdec8c6b204f"
+  integrity sha512-8e2HYcg7ohnTUbHk8focoklEQYvemQmu9M/f43DZVx43kHn0tE3BY/6gSDxS7k0SprtS0NHvj+L80cGLnoOUcQ==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -3106,10 +3089,19 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.2.18":
+"@types/react@*":
   version "18.2.18"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.18.tgz#c8b233919eef1bdc294f6f34b37f9727ad677516"
   integrity sha512-da4NTSeBv/P34xoZPhtcLkmZuJ+oYaCxHmyHzwaDQo9RQPBeXV+06gEk2FpqEcsX9XrnNLvRpVh6bdavDSjtiQ==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^18.2.20":
+  version "18.2.20"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.20.tgz#1605557a83df5c8a2cc4eeb743b3dfc0eb6aaeb2"
+  integrity sha512-WKNtmsLWJM/3D5mG4U84cysVY31ivmyw85dE84fOCk5Hx78wezB/XEjVPWl2JTZ5FkEeaTJf+VgUAUn3PE7Isw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -5417,7 +5409,7 @@ enhanced-resolve@5.12.0:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
 
-enhanced-resolve@^5.10.0, enhanced-resolve@^5.15.0:
+enhanced-resolve@^5.10.0, enhanced-resolve@^5.15.0, enhanced-resolve@^5.7.0:
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.15.0.tgz#1af946c7d93603eb88e9896cee4904dc012e9c35"
   integrity sha512-LXYT42KJ7lpIKECr2mAXIaMldcNCh/7E0KBKOu4KSfkHmP+mZmSs+8V5gBAqisWBy0OO4W5Oyys0GO1Y8KtdKg==
@@ -9328,10 +9320,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==
 
-prettier@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.0.0.tgz#e7b19f691245a21d618c68bc54dc06122f6105ae"
-  integrity sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==
+prettier@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.0.1.tgz#65271fc9320ce4913c57747a70ce635b30beaa40"
+  integrity sha512-fcOWSnnpCrovBsmFZIGIy9UqK2FaI7Hqax+DIO0A9UxeVoY4iweyaFjS5TavZN97Hfehph0nhsZnjlVKzEQSrQ==
 
 pretty-error@^4.0.0:
   version "4.0.0"
@@ -10807,6 +10799,15 @@ trough@^1.0.0:
   resolved "https://registry.yarnpkg.com/trough/-/trough-1.0.5.tgz#b8b639cefad7d0bb2abd37d433ff8293efa5f406"
   integrity sha512-rvuRbTarPXmMb79SmzEp8aqXNKcK+y0XaB298IXueQ8I2PsrATcPBCSPyK/dDNa2iWOhKlfNnOjdAOTBU/nkFA==
 
+tsconfig-paths-webpack-plugin@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/tsconfig-paths-webpack-plugin/-/tsconfig-paths-webpack-plugin-4.1.0.tgz#3c6892c5e7319c146eee1e7302ed9e6f2be4f763"
+  integrity sha512-xWFISjviPydmtmgeUAuXp4N1fky+VCtfhOkDUFIv5ea7p4wuTomI4QTrXvFBX2S4jZsmyTSrStQl+E+4w+RzxA==
+  dependencies:
+    chalk "^4.1.0"
+    enhanced-resolve "^5.7.0"
+    tsconfig-paths "^4.1.2"
+
 tsconfig-paths@^3.14.1, tsconfig-paths@^3.14.2:
   version "3.14.2"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.14.2.tgz#6e32f1f79412decd261f92d633a9dc1cfa99f088"
@@ -10814,6 +10815,15 @@ tsconfig-paths@^3.14.1, tsconfig-paths@^3.14.2:
   dependencies:
     "@types/json5" "^0.0.29"
     json5 "^1.0.2"
+    minimist "^1.2.6"
+    strip-bom "^3.0.0"
+
+tsconfig-paths@^4.1.2:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-4.2.0.tgz#ef78e19039133446d244beac0fd6a1632e2d107c"
+  integrity sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==
+  dependencies:
+    json5 "^2.2.2"
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
