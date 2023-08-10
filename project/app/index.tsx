@@ -1,13 +1,15 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { HashRouter as Router } from 'react-router-dom';
 
 import App from './App';
 import './index.scss';
 
-render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <Router basename="/">
     <App />
-  </Router>,
-  document.querySelector('#root')
+  </Router>
 );

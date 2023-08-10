@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, CardTitle } from 'reactstrap';
-import { AvOrganizationSelect, AvProviderSelect } from '@availity/select/resources';
+import { AvOrganizationSelect, AvProviderSelect } from '@availity/select';
 
 type Organization = {
   customerId: string;
