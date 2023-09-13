@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@availity/mock-server": "^8.0.0",
-    "@availity/workflow": "^10.0.3",
+    "@availity/workflow": "^10.0.4",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.4",
     "@types/node": "^20.5.7",
@@ -67,7 +67,7 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "cross-env": "^7.0.3",
-    "eslint-config-availity": "^8.0.9",
+    "eslint-config-availity": "^9.0.0",
     "prettier": "^3.0.3",
     "typescript": "^5.1.6"
   },
