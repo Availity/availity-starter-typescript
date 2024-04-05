@@ -33,7 +33,7 @@
     "upgrade:workflow": "./node_modules/.bin/upgrade-workflow"
   },
   "resolutions": {
-    "core-js": "3.19.3"
+    "core-js": "3.36.1"
   },
   "dependencies": {
     "@availity/api-axios": "^8.0.6",
@@ -50,7 +50,7 @@
     "axios": "^1.6.8",
     "classnames": "^2.5.1",
     "formik": "^2.4.5",
-    "query-string": "^5.1.1",
+    "query-string": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
