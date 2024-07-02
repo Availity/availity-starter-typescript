@@ -5,8 +5,8 @@ import Spaces from '@availity/spaces';
 import PageHeader from '@availity/page-header';
 import qs from 'query-string';
 
-import Request from './Request';
-import Response from './Response';
+import { Request } from './Request';
+import { Response } from './Response';
 import { Footer } from './components';
 
 const App = (): JSX.Element => {
