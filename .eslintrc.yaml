@@ -1,4 +1,4 @@
-extends: availity/workflow
+extends: availity/browser
 rules:
   jest/expect-expect: 0
   import/extensions: 0
