@@ -1,15 +1,29 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from '@availity/element';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import App from './App';
-import './index.scss';
 
 const container = document.getElementById('root');
-const root = createRoot(container!);
+if (!container) throw new Error('Unable to find root node');
+const root = createRoot(container);
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: 10000,
+    },
+  },
+});
 
 root.render(
-  <Router basename="/">
-    <App />
-  </Router>
+  <ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <App />
+      </Router>
+    </QueryClientProvider>
+  </ThemeProvider>
 );

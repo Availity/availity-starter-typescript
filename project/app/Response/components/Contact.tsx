@@ -1,16 +1,15 @@
-import React from 'react';
-import { Card, CardTitle, Row } from 'reactstrap';
+import { Card, CardHeader, CardContent, Grid } from '@availity/element';
 
-import ResponseField from './ResponseField';
+import { ResponseField } from './ResponseField';
 
-const Contact = (): JSX.Element => (
-  <Card body className="mb-3">
-    <CardTitle className="card-title-secondary">Payer Contact Information</CardTitle>
-    <Row>
-      <ResponseField sm="3" label="Contact Name" value="Aetna" />
-      <ResponseField sm="3" label="Phone Number" value="(800) 955-5682" />
-    </Row>
+export const Contact = () => (
+  <Card sx={{ width: '100%' }}>
+    <CardHeader title="Payer Contact Information" />
+    <CardContent>
+      <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>
+        <ResponseField sm={6} label="Contact Name" value="Aetna" />
+        <ResponseField sm={6} label="Phone Number" value="(800) 955-5682" />
+      </Grid>
+    </CardContent>
   </Card>
 );
-
-export default Contact;

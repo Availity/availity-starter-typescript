@@ -1,19 +1,21 @@
-import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+
 import App from './App';
 
 describe('App', () => {
   test('renders', async () => {
     render(
-      <Router initialEntries={['/']}>
-        <App />
-      </Router>
+      <QueryClientProvider client={new QueryClient()}>
+        <Router initialEntries={['/']}>
+          <App />
+        </Router>
+      </QueryClientProvider>
     );
 
     await waitFor(() => {
-      screen.getByTestId('app-container');
-      screen.getByText('Basic Information');
+      screen.getByText('Appeal Request Form');
     });
   });
 });

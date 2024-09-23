@@ -1,15 +1,15 @@
-import React from 'react';
-import Icon from '@availity/icon';
-import Link from '@availity/link';
+import { Link, HeartIcon, Typography, Stack } from '@availity/element';
 
-const Footer = (): JSX.Element => (
-  <p className="text-center mt-3">
-    Made with <Icon name="heart" color="danger" /> by
-    <Link className="mx-1" href="https://www.availity.com" target="_blank">
-      Availity
-    </Link>
-    2020
-  </p>
+const year = new Date().getFullYear();
+
+export const Footer = () => (
+  <Stack direction="row" justifyContent="center" mt="1.5rem">
+    <Typography>
+      Made with <HeartIcon color="error" /> at
+      <Link href="https://www.availity.com" target="_blank" iconPosition="end">
+        Availity
+      </Link>{' '}
+      {year}
+    </Typography>
+  </Stack>
 );
-
-export default Footer;

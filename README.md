@@ -7,6 +7,7 @@
 The following are links to documentation for building an app at Availity
 
 - [Availity GitHub Repositories](https://github.com/Availity)
+- [Availity Element (Component Library)](https://availity.github.io/element/?path=/docs/element--docs)
 - [Availity Workflow Tutorial](https://availity.github.io/availity-workflow/)
 - [Availity Component Docs](https://availity.github.io/availity-react/)
 - [Availity JavaScript SDK Docs](https://availity.github.io/sdk-js/)
