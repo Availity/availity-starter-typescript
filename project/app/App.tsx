@@ -1,30 +1,31 @@
-import React, { useMemo } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { Container } from 'reactstrap';
-import Spaces from '@availity/spaces';
-import PageHeader from '@availity/page-header';
-import qs from 'query-string';
+import { Routes, Route, useSearchParams } from 'react-router-dom';
+import { Container, PageHeader, Spaces } from '@availity/element';
 
 import { Request } from './Request';
 import { Response } from './Response';
 import { Footer } from './components';
 
-const App = (): JSX.Element => {
-  const { search } = useLocation();
-
-  const spaceId = useMemo(() => qs.parse(search).spaceId, [search]);
+const App = () => {
+  const [searchParams] = useSearchParams();
+  const spaceId = searchParams.get('spaceId') || '';
 
   return (
-    <Spaces spaceIds={[spaceId]} clientId="test">
-      <Container data-testid="app-container" id="app-container">
-        <PageHeader spaceId={spaceId} appName="Appeal Request Form" />
-        <Routes>
-          <Route path="/" element={<Request />} />
-          <Route path="/response" element={<Response />} />
-        </Routes>
-        <Footer />
-      </Container>
-    </Spaces>
+    <Container data-testid="app-container" id="app-container">
+      <Spaces spaceIds={[spaceId]} clientId="test">
+        <PageHeader
+          breadcrumbs={{ active: 'Request Form' }}
+          headerText="Appeal Request Form"
+          helpAppName="Appeal Request Form"
+        />
+        <Container>
+          <Routes>
+            <Route path="/" element={<Request />} />
+            <Route path="/response" element={<Response />} />
+          </Routes>
+          <Footer />
+        </Container>
+      </Spaces>
+    </Container>
   );
 };
 

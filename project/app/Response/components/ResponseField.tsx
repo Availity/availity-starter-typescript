@@ -1,16 +1,14 @@
-import React from 'react';
-import { Col, ColProps } from 'reactstrap';
+import type { ReactNode } from 'react';
+import { Grid, GridProps, Typography } from '@availity/element';
 
-interface Props extends ColProps {
-  label?: string;
-  value?: string;
-}
+type ResponseFieldProps = {
+  label: string;
+  value: ReactNode;
+} & Omit<GridProps, 'children'>;
 
-const ResponseField = ({ label, value, children, ...rest }: Props): JSX.Element => (
-  <Col {...rest}>
-    <h5 className="text-label">{label}</h5>
-    <p>{children || value}</p>
-  </Col>
+export const ResponseField = ({ label, value, ...rest }: ResponseFieldProps) => (
+  <Grid {...rest}>
+    <Typography variant="h6">{label}</Typography>
+    <Typography variant="subtitle2">{value}</Typography>
+  </Grid>
 );
-
-export default ResponseField;

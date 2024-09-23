@@ -1,52 +1,24 @@
-import React from 'react';
-import { Card, CardTitle, CardBody, Row, Collapse, Button } from 'reactstrap';
-import classnames from 'classnames';
-import { useToggle } from '@availity/hooks';
+import { Card, CardHeader, CardContent, Grid, Accordion, AccordionSummary, AccordionDetails } from '@availity/element';
 
-import ResponseField from './ResponseField';
+import { ResponseField } from './ResponseField';
 
-const Provider = (): JSX.Element => {
-  const [collapsed, toggleCollapse] = useToggle(false);
-
-  return (
-    <Card body className="mb-3">
-      <CardTitle className="card-title-secondary">Provider Information</CardTitle>
-
-      <Row>
-        <ResponseField label="Requesting Provider" value="Rodriguez, Brandon" sm="3" />
-        <ResponseField label="Referred-To-Provider" value="Riviera, Nick" sm="3" />
-      </Row>
-
-      <Card className="card-collapsible">
-        <h5 className="card-header">
-          <Button
-            className={classnames({
-              'card-collapsible-link': true,
-              collapsed: !collapsed,
-            })}
-            color="link"
-            onClick={() => toggleCollapse()}
-          >
-            View more data
-          </Button>
-        </h5>
-
-        <Collapse isOpen={collapsed}>
-          <CardBody>
-            <p>
-              Aut explicabo quas nihil quia ex aspernatur quod sint. Ut blanditiis itaque ab blanditiis et aut amet.
-              Saepe voluptatem exercitationem tenetur necessitatibus. Amet debitis cupiditate sunt distinctio saepe
-              nostrum laboriosam omnis.
-            </p>
-            <p>
-              Natus voluptatem natus impedit. Facere voluptatem voluptas velit vel. Qui id reprehenderit beatae ea et
-              sit blanditiis excepturi.
-            </p>
-          </CardBody>
-        </Collapse>
-      </Card>
-    </Card>
-  );
-};
-
-export default Provider;
+export const Provider = () => (
+  <Card>
+    <CardHeader title="Provider Information" />
+    <CardContent>
+      <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>
+        <ResponseField label="Requesting Provider" value="Rodriguez, Brandon" sm={6} />
+        <ResponseField label="Referred-To-Provider" value="Riviera, Nick" sm={6} />
+      </Grid>
+      <Accordion sx={{ mt: '1.5rem' }}>
+        <AccordionSummary aria-controls="panel-content" id="panel-header">
+          View more data
+        </AccordionSummary>
+        <AccordionDetails>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo
+          lobortis eget.
+        </AccordionDetails>
+      </Accordion>
+    </CardContent>
+  </Card>
+);
