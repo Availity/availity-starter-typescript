@@ -7,8 +7,8 @@ export const Contact = () => (
     <CardHeader title="Payer Contact Information" />
     <CardContent>
       <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>
-        <ResponseField sm={6} label="Contact Name" value="Aetna" />
-        <ResponseField sm={6} label="Phone Number" value="(800) 955-5682" />
+        <ResponseField size={{ sm: 6 }} label="Contact Name" value="Aetna" />
+        <ResponseField size={{ sm: 6 }} label="Phone Number" value="(800) 955-5682" />
       </Grid>
     </CardContent>
   </Card>

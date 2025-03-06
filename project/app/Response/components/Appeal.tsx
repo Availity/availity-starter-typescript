@@ -10,8 +10,8 @@ export const Appeal = () => (
     <CardHeader title="Appeal Information" />
     <CardContent>
       <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>
-        <ResponseField xs={4} label="Reason" value="Timely Filing" />
-        <ResponseField xs={8} label="Description" value={description} />
+        <ResponseField size={{ xs: 4 }} label="Reason" value="Timely Filing" />
+        <ResponseField size={{ xs: 8 }} label="Description" value={description} />
       </Grid>
     </CardContent>
   </Card>
