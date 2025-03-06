@@ -67,5 +67,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "availityWorkflow": true
+  "availityWorkflow": true,
+  "packageManager": "yarn@4.7.0"
 }
