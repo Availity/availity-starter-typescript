@@ -15,7 +15,7 @@ const App = () => {
         <PageHeader
           breadcrumbs={{ active: 'Request Form' }}
           headerText="Appeal Request Form"
-          helpAppName="Appeal Request Form"
+          help={{ helpAppName: 'Appeal Request Form', url: 'https://design.availity.com' }}
         />
         <Container>
           <Routes>

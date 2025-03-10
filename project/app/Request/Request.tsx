@@ -102,7 +102,7 @@ export const Request = () => {
     <Paper sx={{ padding: '1.5rem' }}>
       <form onSubmit={handleSubmit(handleOnSubmit)}>
         <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>
-          <Grid md={6}>
+          <Grid size={{ md: 6 }}>
             <Controller
               name="organization"
               control={control}
@@ -124,7 +124,7 @@ export const Request = () => {
               )}
             />
           </Grid>
-          <Grid md={6}>
+          <Grid size={{ md: 6 }}>
             <Controller
               name="provider"
               control={control}
@@ -144,7 +144,7 @@ export const Request = () => {
               )}
             />
           </Grid>
-          <Grid md={6}>
+          <Grid size={{ md: 6 }}>
             <TextField
               {...register('memberId')}
               error={!!errors.memberId}
@@ -153,7 +153,7 @@ export const Request = () => {
               required
             />
           </Grid>
-          <Grid md={6}>
+          <Grid size={{ md: 6 }}>
             <TextField
               {...register('claimId')}
               error={!!errors.claimId}
@@ -162,7 +162,7 @@ export const Request = () => {
               required
             />
           </Grid>
-          <Grid xs={12}>
+          <Grid size={{ xs: 12 }}>
             <TextField {...register('description')} error={!!errors.description} label="More information" multiline />
           </Grid>
         </Grid>

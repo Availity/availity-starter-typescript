@@ -7,8 +7,8 @@ export const Provider = () => (
     <CardHeader title="Provider Information" />
     <CardContent>
       <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>
-        <ResponseField label="Requesting Provider" value="Rodriguez, Brandon" sm={6} />
-        <ResponseField label="Referred-To-Provider" value="Riviera, Nick" sm={6} />
+        <ResponseField label="Requesting Provider" value="Rodriguez, Brandon" size={{ sm: 6 }} />
+        <ResponseField label="Referred-To-Provider" value="Riviera, Nick" size={{ sm: 6 }} />
       </Grid>
       <Accordion sx={{ mt: '1.5rem' }}>
         <AccordionSummary aria-controls="panel-content" id="panel-header">
