@@ -6,6 +6,7 @@ node_modules/
 coverage/
 reports/
 build/
+dist/
 
 # Yarn
 .yarn-integrity
