@@ -22,41 +22,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/analytics-core@npm:^5.0.11":
-  version: 5.0.11
-  resolution: "@availity/analytics-core@npm:5.0.11"
+"@availity/analytics-core@npm:^6.0.0":
+  version: 6.0.1
+  resolution: "@availity/analytics-core@npm:6.0.1"
   dependencies:
     uuid: "npm:^10.0.0"
     yup: "npm:^0.32.11"
-  checksum: 10c0/7a10a98b2b693aad20306075c7005dcaf65a6923b7ca866276caaf154b00af195cd76490b372099a716626dcb2596360adae84a7f7a15100364f7b1dc2f868f0
+  checksum: 10c0/72d6ed7e06de045beadd090aa9e76dbc09d7e13d5ed8e771c318b457e2e8a074d8da00bff2d60d933f587d7de48457b9556829fc1351ed47f6a7d9668e839f4f
   languageName: node
   linkType: hard
 
-"@availity/api-axios@npm:10.0.3, @availity/api-axios@npm:^10.0.3":
-  version: 10.0.3
-  resolution: "@availity/api-axios@npm:10.0.3"
+"@availity/api-axios@npm:11.1.0, @availity/api-axios@npm:^11.0.0, @availity/api-axios@npm:^11.1.0":
+  version: 11.1.0
+  resolution: "@availity/api-axios@npm:11.1.0"
   dependencies:
-    "@availity/resolve-url": "npm:3.0.3"
+    "@availity/resolve-url": "npm:4.0.0"
     lodash: "npm:^4.17.21"
     qs: "npm:^6.14.0"
   peerDependencies:
     axios: ^1.7.7
-  checksum: 10c0/3c3f4a7b7cafd73d7f45530cbb65faae683fab2c64eeae8ff4f25c607ec91198cce0f2315a6c264f66a345d2e56f22517f6d0ef32412c7d12b3ce0f36a1daa62
+  checksum: 10c0/1d16f6cac3f8510025d035678899fceee4ab36f57aed7e773a368ba248b9b08222ef7986bd3e53e193a2c67ea3f3489b4588878d494d4b8e188154f3b820880d
   languageName: node
   linkType: hard
 
-"@availity/authorize@npm:^4.1.4":
-  version: 4.1.6
-  resolution: "@availity/authorize@npm:4.1.6"
+"@availity/authorize@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@availity/authorize@npm:5.0.0"
   dependencies:
     "@availity/block-ui": "npm:^1.0.0"
     "@tanstack/react-query": "npm:^4.36.1"
   peerDependencies:
-    "@availity/api-axios": ^10.0.3
+    "@availity/api-axios": ^11.0.0
     axios: ^1.8.2
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10c0/d307e7dcb9907b4f9e8d711d5496a846e849c7025e8060cc3162ede7b62951a091824e5b3cd4fc34c19d47e78723b0e436ce3c9fc8a09c8d95defec9ae73633b
+  checksum: 10c0/16b47acace338ee7b1be3bb9fd3eeeba0e4330f2ece67fd53dbba58f0f955edacd47fbb35ddb42a42f5e507ca2dcf7f8d8bea73b7b87100aaa994752ccbda2a0
   languageName: node
   linkType: hard
 
@@ -76,68 +76,68 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/element@npm:^1.0.37":
-  version: 1.0.37
-  resolution: "@availity/element@npm:1.0.37"
+"@availity/element@npm:^1.0.56":
+  version: 1.0.56
+  resolution: "@availity/element@npm:1.0.56"
   dependencies:
-    "@availity/mui-accordion": "npm:1.0.6"
+    "@availity/mui-accordion": "npm:1.0.7"
     "@availity/mui-alert": "npm:1.0.6"
-    "@availity/mui-authorize": "npm:1.0.7"
-    "@availity/mui-autocomplete": "npm:1.1.4"
-    "@availity/mui-avatar": "npm:1.0.3"
+    "@availity/mui-authorize": "npm:1.0.9"
+    "@availity/mui-autocomplete": "npm:1.2.4"
+    "@availity/mui-avatar": "npm:1.0.4"
     "@availity/mui-backdrop": "npm:1.0.2"
     "@availity/mui-badge": "npm:1.0.3"
     "@availity/mui-block-ui": "npm:1.0.6"
     "@availity/mui-breadcrumbs": "npm:1.0.5"
     "@availity/mui-button": "npm:1.1.4"
-    "@availity/mui-card": "npm:1.0.11"
+    "@availity/mui-card": "npm:1.0.12"
     "@availity/mui-checkbox": "npm:1.0.3"
-    "@availity/mui-chip": "npm:1.0.3"
-    "@availity/mui-controlled-form": "npm:1.3.3"
-    "@availity/mui-datepicker": "npm:1.0.19"
-    "@availity/mui-dialog": "npm:1.0.13"
+    "@availity/mui-chip": "npm:1.0.4"
+    "@availity/mui-controlled-form": "npm:1.4.0"
+    "@availity/mui-datepicker": "npm:1.2.0"
+    "@availity/mui-dialog": "npm:1.0.15"
     "@availity/mui-disclaimer": "npm:1.0.5"
     "@availity/mui-divider": "npm:1.0.2"
     "@availity/mui-empty-state": "npm:1.0.5"
-    "@availity/mui-event-tracker": "npm:1.0.13"
-    "@availity/mui-favorites": "npm:1.1.4"
-    "@availity/mui-feedback": "npm:1.0.13"
-    "@availity/mui-file-selector": "npm:1.6.5"
-    "@availity/mui-form-utils": "npm:1.3.1"
+    "@availity/mui-event-tracker": "npm:1.0.15"
+    "@availity/mui-favorites": "npm:1.1.6"
+    "@availity/mui-feedback": "npm:1.0.15"
+    "@availity/mui-file-selector": "npm:1.8.1"
+    "@availity/mui-form-utils": "npm:1.3.2"
     "@availity/mui-icon": "npm:1.1.0"
     "@availity/mui-layout": "npm:1.0.2"
     "@availity/mui-link": "npm:1.1.1"
-    "@availity/mui-list": "npm:1.0.6"
+    "@availity/mui-list": "npm:1.0.7"
     "@availity/mui-menu": "npm:1.0.6"
-    "@availity/mui-modal": "npm:1.0.11"
-    "@availity/mui-page-header": "npm:1.1.25"
-    "@availity/mui-pagination": "npm:1.0.8"
+    "@availity/mui-modal": "npm:1.0.12"
+    "@availity/mui-page-header": "npm:1.1.37"
+    "@availity/mui-pagination": "npm:1.0.10"
     "@availity/mui-paper": "npm:1.0.2"
     "@availity/mui-popover": "npm:1.0.2"
     "@availity/mui-popper": "npm:1.0.6"
     "@availity/mui-progress": "npm:1.0.3"
     "@availity/mui-snackbar": "npm:1.0.6"
-    "@availity/mui-spaces": "npm:1.0.17"
-    "@availity/mui-stepper": "npm:1.0.6"
-    "@availity/mui-table": "npm:1.0.16"
+    "@availity/mui-spaces": "npm:1.0.29"
+    "@availity/mui-stepper": "npm:1.0.7"
+    "@availity/mui-table": "npm:1.0.19"
     "@availity/mui-tabs": "npm:1.2.2"
-    "@availity/mui-textfield": "npm:1.2.4"
+    "@availity/mui-textfield": "npm:1.3.1"
     "@availity/mui-toggle-button": "npm:1.0.3"
     "@availity/mui-tooltip": "npm:1.0.2"
     "@availity/mui-transitions": "npm:1.0.6"
     "@availity/mui-tree": "npm:1.0.4"
     "@availity/mui-typography": "npm:1.0.2"
     "@availity/mui-utils": "npm:1.0.2"
-    "@availity/theme-provider": "npm:1.0.14"
+    "@availity/theme-provider": "npm:1.0.17"
     "@mui/material": "npm:^6.4.5"
     "@mui/system": "npm:^6.4.3"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 10c0/898dc59a919daf1854a7fd2db9c5da1f39d3cf98f0349becff751689ebaec81e79e9481d608730e929da3021bc324ed030eb23dd3b2fc9cad08d48842c3aa8af
+  checksum: 10c0/ad2a6c396687963ea2cb63ef5518f2b15636ecc620763ed9e92e656001f3bbec04efc84ecea24063cf6192fd163239e19275fb4f0ce1a0b82599b697dc5c775f
   languageName: node
   linkType: hard
 
-"@availity/hooks@npm:^5.1.3":
+"@availity/hooks@npm:^5.1.5":
   version: 5.1.5
   resolution: "@availity/hooks@npm:5.1.5"
   dependencies:
@@ -153,10 +153,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/message-core@npm:^7.0.5":
-  version: 7.0.5
-  resolution: "@availity/message-core@npm:7.0.5"
-  checksum: 10c0/53f60d40861ab621e82babc1d4c48660596d39ab556beec2d3070d6acd19ceb856c90b5c83ac25ee1527f12e31fd44adf4ca6c6bd52e7621192f0b8eb05fd32b
+"@availity/message-core@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@availity/message-core@npm:8.0.0"
+  checksum: 10c0/54a1da74d8d1c1ce14618f1136986e1918bb3db81013554a2823afac75c84c32aa5ed68d38d6357d08d0adf3f6cedf4d6a98639baa8c624f2baa7577ac5163f3
   languageName: node
   linkType: hard
 
@@ -187,14 +187,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-accordion@npm:1.0.6":
-  version: 1.0.6
-  resolution: "@availity/mui-accordion@npm:1.0.6"
+"@availity/mui-accordion@npm:1.0.7":
+  version: 1.0.7
+  resolution: "@availity/mui-accordion@npm:1.0.7"
   peerDependencies:
     "@availity/mui-icon": ^1.1.0
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/9c02c840ce78d8947f9447abd6d22c35a5ca54d2c8be78f20ccf123e010415dfef658c7122e104347919d122f697b5c6650ef7e1e1da2408d790350d02d8063b
+  checksum: 10c0/c3a62d9a26e6494565d3a1be2f246678369c50e73ffa209b0c5a49173650d79e11146e721dcefa1f01acb2dea441894f7baaca8e48c4c7628c32e3da41d0aee6
   languageName: node
   linkType: hard
 
@@ -211,46 +211,47 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-authorize@npm:1.0.7":
-  version: 1.0.7
-  resolution: "@availity/mui-authorize@npm:1.0.7"
+"@availity/mui-authorize@npm:1.0.9":
+  version: 1.0.9
+  resolution: "@availity/mui-authorize@npm:1.0.9"
   dependencies:
-    "@availity/authorize": "npm:^4.1.4"
+    "@availity/authorize": "npm:^5.0.0"
     "@availity/mui-block-ui": "npm:^1.0.6"
     "@tanstack/react-query": "npm:^4.36.1"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/5a68f789cdaf625f3568f550f683515e464100c3ec24959666d0c90ec04e7ee41e9f3ada5d64e5d78a39f636e00508aeeccf547b1e7ae5834dab458bbe9299ba
+  checksum: 10c0/bd2d868e154f1622ddde97c34054e3d16d1f692fe8bc4f057ddc23d945d0454c90ac5f9f66ba72bd16e1e9a0c213a72802049ab2f381708e9eb65df15d2484bc
   languageName: node
   linkType: hard
 
-"@availity/mui-autocomplete@npm:1.1.4, @availity/mui-autocomplete@npm:^1.1.4":
-  version: 1.1.4
-  resolution: "@availity/mui-autocomplete@npm:1.1.4"
+"@availity/mui-autocomplete@npm:1.2.4, @availity/mui-autocomplete@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "@availity/mui-autocomplete@npm:1.2.4"
   dependencies:
     "@mui/types": "npm:^7.2.21"
+    qs: "npm:^6.14.0"
   peerDependencies:
     "@availity/api-axios": ^8.0.7
-    "@availity/mui-form-utils": ^1.3.1
-    "@availity/mui-textfield": ^1.2.4
+    "@availity/mui-form-utils": ^1.3.2
+    "@availity/mui-textfield": ^1.3.1
     "@mui/material": ^6.4.5
     "@tanstack/react-query": ^4.36.1
     react: ">=16.3.0"
-  checksum: 10c0/15207a34c695572b53404c0ef449fd2d7af7032e148d3feccbab800009f90438ca2b6974ef5f37ee8f177461587d6df01dd167b75f63b2e5a212e326741bcc8d
+  checksum: 10c0/da2cc1cfe108864f49deae4f8cdaeedef8077bb52f2360cb3b4bf87c135afa94d601fbd6151a35d311cbf4cf2f6aa180ca17c26bff20ca29d67a716e784a4274
   languageName: node
   linkType: hard
 
-"@availity/mui-avatar@npm:1.0.3":
-  version: 1.0.3
-  resolution: "@availity/mui-avatar@npm:1.0.3"
+"@availity/mui-avatar@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@availity/mui-avatar@npm:1.0.4"
   dependencies:
-    "@availity/api-axios": "npm:^10.0.3"
+    "@availity/api-axios": "npm:^11.0.0"
   peerDependencies:
     "@availity/mui-icon": ^1.1.0
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/3dea10d6f1eb0502edd7d0d08cc0665b84ebe0364d5cdf51f7df43a69d6b2a3e0919b67921913c99066bc2a385e8db1bbb7702118a5aec451a1899ee2907be0b
+  checksum: 10c0/4fd0a963f0bd691d75f2b34ec7725e5c524e36d4f8d51d1de2ad31e1a80a5c34fa263db555bb0a5f0474e819fa95907207c12c4b55fa70fa2a8ee4a9c2bc5f03
   languageName: node
   linkType: hard
 
@@ -309,13 +310,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-card@npm:1.0.11":
-  version: 1.0.11
-  resolution: "@availity/mui-card@npm:1.0.11"
+"@availity/mui-card@npm:1.0.12":
+  version: 1.0.12
+  resolution: "@availity/mui-card@npm:1.0.12"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/f4110dbd1bcd658f7f375b4bc4ccac8cf94d5202e1f24d7e2ae82eb3734a46f250392aab1966ea553bbbd4a96841a308d6234638aceb132fed3b6312bdf87d1a
+  checksum: 10c0/042deed646847c64e1f37993ec2734b2e3bb4f4738679468b53c0fb7eb261c4caebe6a5e0426b3b7fa2435a864a47cb997cfe1d9d58d4108492c058729e123df
   languageName: node
   linkType: hard
 
@@ -329,52 +330,52 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-chip@npm:1.0.3":
-  version: 1.0.3
-  resolution: "@availity/mui-chip@npm:1.0.3"
+"@availity/mui-chip@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@availity/mui-chip@npm:1.0.4"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/8176cc0350a75edbfaba4121696d53dde9a43099f71f8bbe54e612520c5320cf572b901c9336e0e03635ad79a4312c8870537ca2e608bffbdc9ab0b4df727585
+  checksum: 10c0/ee9c555cc3e07efcc8794a179c9dfe790864ff1463eb22cf6a8fdcf7adf5494b8891359fa1b813483e7adc44b98e9edd30e53da442912cab6f32442c455f9c79
   languageName: node
   linkType: hard
 
-"@availity/mui-controlled-form@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@availity/mui-controlled-form@npm:1.3.3"
+"@availity/mui-controlled-form@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@availity/mui-controlled-form@npm:1.4.0"
   dependencies:
-    "@availity/mui-autocomplete": "npm:^1.1.4"
+    "@availity/mui-autocomplete": "npm:^1.2.4"
     "@availity/mui-checkbox": "npm:^1.0.3"
-    "@availity/mui-datepicker": "npm:^1.0.19"
-    "@availity/mui-form-utils": "npm:^1.3.1"
-    "@availity/mui-textfield": "npm:^1.2.4"
+    "@availity/mui-datepicker": "npm:^1.2.0"
+    "@availity/mui-form-utils": "npm:^1.3.2"
+    "@availity/mui-textfield": "npm:^1.3.1"
     react-hook-form: "npm:^7.55.0"
   peerDependencies:
     "@availity/api-axios": ^8.0.7
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/fffb37b3738e4bc113761d33faa44649c1476da1d5119633d430428be1423adc5e19bdd837f7a1826307efe05095721aedd7d278419fc7d239dbd29bd1e51ce8
+  checksum: 10c0/d23bbcce95e32b9065caf3eeb7295a2570886426029a327f3a08ab5f3dd0ffda943a37fb37e030e4c664e5aff280b9cd649afd939cf931ea2d609570810833bf
   languageName: node
   linkType: hard
 
-"@availity/mui-datepicker@npm:1.0.19, @availity/mui-datepicker@npm:^1.0.19":
-  version: 1.0.19
-  resolution: "@availity/mui-datepicker@npm:1.0.19"
+"@availity/mui-datepicker@npm:1.2.0, @availity/mui-datepicker@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@availity/mui-datepicker@npm:1.2.0"
   dependencies:
     "@availity/mui-icon": "npm:1.1.0"
-    "@availity/mui-textfield": "npm:1.2.4"
+    "@availity/mui-textfield": "npm:1.3.1"
     "@mui/x-date-pickers": "npm:^7.26.0"
     dayjs: "npm:^1.11.13"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/764be57638eb088d8e5ed0964ef9f0a4eab2af0260d673085d2c8a9eb7c5d26920fba74f12cefa4a0b6bf8b55c2bff9992648fa54baefb72f9c865f0d70a818e
+  checksum: 10c0/e62b0a0c4e01315f3eec2b8b5eb5c6cda80f4e3e63abbee59127f8d7ff30d41706dd01ab2efdcea27afdaa2aa027c37a2d2c54102e27dc144a4202bfd3d75769
   languageName: node
   linkType: hard
 
-"@availity/mui-dialog@npm:1.0.13":
-  version: 1.0.13
-  resolution: "@availity/mui-dialog@npm:1.0.13"
+"@availity/mui-dialog@npm:1.0.15":
+  version: 1.0.15
+  resolution: "@availity/mui-dialog@npm:1.0.15"
   dependencies:
     "@availity/mui-alert": "npm:1.0.6"
     "@availity/mui-button": "npm:1.1.4"
@@ -382,7 +383,7 @@ __metadata:
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/23526cf6fdc9dc06a1adfd2f293307b9487b2d0781129eeb08890d1df0fd36dabb6bf362a41132fd0a554de849dde93827ffd3c63235702d03cea382c6a76071
+  checksum: 10c0/ffa351c200f7fe245d4388bed6073c964d0714beef461e64c38d8d5a4bdfb49d50225620b283440726a669fe84664674f1d73cd638a605e934417f1867cadb91
   languageName: node
   linkType: hard
 
@@ -421,24 +422,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-event-tracker@npm:1.0.13":
-  version: 1.0.13
-  resolution: "@availity/mui-event-tracker@npm:1.0.13"
+"@availity/mui-event-tracker@npm:1.0.15":
+  version: 1.0.15
+  resolution: "@availity/mui-event-tracker@npm:1.0.15"
   dependencies:
-    "@availity/analytics-core": "npm:^5.0.11"
+    "@availity/analytics-core": "npm:^6.0.0"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/d08bd493be5386deff63aac4d3c26ab25e9987f36e579c4dbfb24f71a236d651da9fff5ff8bb7f7335bc970dc6186384d210865f99e407d3d571daf26da80f7a
+  checksum: 10c0/4472abcd1268f3c86c6f90bfae0903daa7312aa35777960a5a6b07c48902a113b3b62d4547ca14803e883b5f9f8b0d785c4cff81d9a00f94899dd927e2eff398
   languageName: node
   linkType: hard
 
-"@availity/mui-favorites@npm:1.1.4":
-  version: 1.1.4
-  resolution: "@availity/mui-favorites@npm:1.1.4"
+"@availity/mui-favorites@npm:1.1.6":
+  version: 1.1.6
+  resolution: "@availity/mui-favorites@npm:1.1.6"
   dependencies:
-    "@availity/api-axios": "npm:^10.0.3"
-    "@availity/message-core": "npm:^7.0.5"
+    "@availity/api-axios": "npm:^11.0.0"
+    "@availity/message-core": "npm:^8.0.0"
     "@tanstack/react-query": "npm:^4.36.1"
   peerDependencies:
     "@availity/mui-icon": ^1.1.0
@@ -446,63 +447,63 @@ __metadata:
     "@availity/mui-tooltip": ^1.0.2
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/94d3146b44944e25e113855ff504ae97ac7e039c2dbbd3d8f8cfddef13601a45757ac574ef547b441303abcf188538e71982ae6ce51db9a5f0e4a1d3060a92bd
+  checksum: 10c0/351a51c4de534cd63b726a5d6c2f7096ef95d0406372f560c32060ce3439d132ff9a9f0ced1e68b16ad5851b20bc690dcec6378aa356576367c18a98c476529f
   languageName: node
   linkType: hard
 
-"@availity/mui-feedback@npm:1.0.13, @availity/mui-feedback@npm:^1.0.13":
-  version: 1.0.13
-  resolution: "@availity/mui-feedback@npm:1.0.13"
+"@availity/mui-feedback@npm:1.0.15, @availity/mui-feedback@npm:^1.0.15":
+  version: 1.0.15
+  resolution: "@availity/mui-feedback@npm:1.0.15"
   dependencies:
-    "@availity/api-axios": "npm:^10.0.3"
+    "@availity/api-axios": "npm:^11.0.0"
     "@availity/mui-button": "npm:^1.1.4"
-    "@availity/mui-form-utils": "npm:^1.3.1"
+    "@availity/mui-form-utils": "npm:^1.3.2"
     "@availity/mui-icon": "npm:^1.1.0"
     "@availity/mui-layout": "npm:^1.0.2"
     "@availity/mui-popover": "npm:^1.0.2"
-    "@availity/mui-textfield": "npm:^1.2.4"
+    "@availity/mui-textfield": "npm:^1.3.1"
     "@availity/mui-toggle-button": "npm:^1.0.3"
     "@availity/mui-typography": "npm:^1.0.2"
     react-hook-form: "npm:^7.55.0"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/084c7611738f929631faddf849202c3592c6d56d4db29ec5f180428170d76b46c6c0d0411919106f33766729585fbf3264c2a0aa7cd0198464779ec6dd8089f4
+  checksum: 10c0/1c13e79552de49c167f55d11a489672909be6de3183cb2a159c8dc54cac851140b97cb92e07bff0a71c437f4fdf189e9c11da821f397bef34c39a4d7187ea2cb
   languageName: node
   linkType: hard
 
-"@availity/mui-file-selector@npm:1.6.5":
-  version: 1.6.5
-  resolution: "@availity/mui-file-selector@npm:1.6.5"
+"@availity/mui-file-selector@npm:1.8.1":
+  version: 1.8.1
+  resolution: "@availity/mui-file-selector@npm:1.8.1"
   dependencies:
-    "@availity/api-axios": "npm:^10.0.3"
+    "@availity/api-axios": "npm:^11.0.0"
     "@availity/mui-alert": "npm:^1.0.6"
     "@availity/mui-button": "npm:^1.1.4"
     "@availity/mui-divider": "npm:^1.0.2"
-    "@availity/mui-form-utils": "npm:^1.3.1"
+    "@availity/mui-form-utils": "npm:^1.3.2"
     "@availity/mui-icon": "npm:^1.1.0"
     "@availity/mui-layout": "npm:^1.0.2"
-    "@availity/mui-list": "npm:^1.0.6"
+    "@availity/mui-list": "npm:^1.0.7"
     "@availity/mui-progress": "npm:^1.0.3"
     "@availity/mui-typography": "npm:^1.0.2"
-    "@availity/upload-core": "npm:^7.1.1"
+    "@availity/upload-core": "npm:^8.0.0"
     "@tanstack/react-query": "npm:^4.36.1"
     react-dropzone: "npm:^11.7.1"
     react-hook-form: "npm:^7.55.0"
-    tus-js-client: "npm:4.2.3"
+    tus-js-client: "npm:4.3.1"
     uuid: "npm:^9.0.1"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/dfa1b5bd1be4172cae4d45948ca541a8d1e58eb83b42065bf7d87f43f82bc556159d96c18497deac5974ee21249506b147f8fc67f18eccd7c3000cd9db4257a1
+  checksum: 10c0/40a1c969e401c210c616783069ae2c85e11f366b6539156999be19f6332def5fd17887c843e47ddba65a2f9f01d8d717e6b4d1976c52838d466569972bd47636
   languageName: node
   linkType: hard
 
-"@availity/mui-form-utils@npm:1.3.1, @availity/mui-form-utils@npm:^1.3.1":
-  version: 1.3.1
-  resolution: "@availity/mui-form-utils@npm:1.3.1"
+"@availity/mui-form-utils@npm:1.3.2, @availity/mui-form-utils@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "@availity/mui-form-utils@npm:1.3.2"
   dependencies:
-    "@availity/message-core": "npm:^7.0.5"
+    "@availity/message-core": "npm:^8.0.0"
     "@fortawesome/free-solid-svg-icons": "npm:^6.7.2"
   peerDependencies:
     "@availity/mui-button": 1.1.4
@@ -510,7 +511,7 @@ __metadata:
     "@availity/mui-layout": 1.0.2
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/023a6e9450eae05de245e88fe3e4d91ca05664564c03be87e240f614f3319f4f487614108e90a88d0182ebfcf5d822661118d23eb70ff59d7a8b9295604eb262
+  checksum: 10c0/f5f45e397c219286c7233eef991f66da2435333e071d9e0d6e13f2f9dfab15d10c4b69a992afbaeacfc7c753b0dc6a51a210e0d6e04dc5db748d86b04847d1d2
   languageName: node
   linkType: hard
 
@@ -550,15 +551,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-list@npm:1.0.6, @availity/mui-list@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "@availity/mui-list@npm:1.0.6"
+"@availity/mui-list@npm:1.0.7, @availity/mui-list@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "@availity/mui-list@npm:1.0.7"
   dependencies:
-    "@availity/mui-chip": "npm:1.0.3"
+    "@availity/mui-chip": "npm:1.0.4"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/6a92affb703f3feed17183becb513e0362d0a6f040e67910aa0857eb5445c318ef5bca637642b7bc2c3493296b0292efc26059c823588bd157bc87b2b546b181
+  checksum: 10c0/61abf6410a3de9a6f9aa755a9ff6b365af66b127fac6e4598118fe925a5aad27a57b19b3d6f70c803e0f94ef14b45ec260668a0fdffdf14b9b2fda07a8994393
   languageName: node
   linkType: hard
 
@@ -572,38 +573,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-modal@npm:1.0.11":
-  version: 1.0.11
-  resolution: "@availity/mui-modal@npm:1.0.11"
+"@availity/mui-modal@npm:1.0.12":
+  version: 1.0.12
+  resolution: "@availity/mui-modal@npm:1.0.12"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/b9498ddf2910027cd539073c643843f9e4e1159de19395a1c6decc0a280b5800bed38c2c8d10efa48d087a131de8927014a1e44490e89ef8967cceffea2ebf38
+  checksum: 10c0/71b5d3af7eea63b2438de480a260a6b5125470c165ba8ea3195eb0ffe44d848b7662262118b1dbde20e0763fc394096ac219ee72b1eff19dc6522e19a5d92935
   languageName: node
   linkType: hard
 
-"@availity/mui-page-header@npm:1.1.25":
-  version: 1.1.25
-  resolution: "@availity/mui-page-header@npm:1.1.25"
+"@availity/mui-page-header@npm:1.1.37":
+  version: 1.1.37
+  resolution: "@availity/mui-page-header@npm:1.1.37"
   dependencies:
-    "@availity/mui-feedback": "npm:^1.0.13"
+    "@availity/mui-feedback": "npm:^1.0.15"
   peerDependencies:
     "@availity/mui-breadcrumbs": ^1.0.5
     "@availity/mui-button": ^1.1.4
     "@availity/mui-divider": ^1.0.2
     "@availity/mui-layout": ^1.0.2
     "@availity/mui-link": ^1.1.1
-    "@availity/mui-spaces": ^1.0.17
+    "@availity/mui-spaces": ^1.0.29
     "@availity/mui-typography": ^1.0.2
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/2cd5ddb0503286c8b5d200b7f457cfc416fba6ccdc5d67adb0996d71ab84ed450bfb38b917ccca124127c6e5f7bd4a967f2767087b1439b61e11f1233485e8ce
+  checksum: 10c0/880716f4946ebfb0fd68b9f5662c2ae47f72d12a7b5081eec6927f3b9347d2177398fe0c21e808801b0bf536467864ff63f8b6e9c3f7ef41ec3bfbf19fc08214
   languageName: node
   linkType: hard
 
-"@availity/mui-pagination@npm:1.0.8":
-  version: 1.0.8
-  resolution: "@availity/mui-pagination@npm:1.0.8"
+"@availity/mui-pagination@npm:1.0.10":
+  version: 1.0.10
+  resolution: "@availity/mui-pagination@npm:1.0.10"
   peerDependencies:
     "@availity/mui-icon": 1.1.0
     "@mui/material": ^6.4.5
@@ -612,7 +613,7 @@ __metadata:
   peerDependenciesMeta:
     "@tanstack/react-query":
       optional: true
-  checksum: 10c0/ebd4e7b1ae9b4ee28efafd07564fd0a808f1a8b67acfcf2f9ab8d82a79ff5baa84a108cd8a169e03e4314ea07a2e75939c5cd5fa822270d267ddecb451c61984
+  checksum: 10c0/f51f316a038b7cdce6c90f8632fd0e4bf9d22cdc0813a8252f6633e3000df499019f5402e1b8be3dd15b28890609a47e28e4fd3eac8600ac9cd23b93aaae3cee
   languageName: node
   linkType: hard
 
@@ -669,15 +670,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-spaces@npm:1.0.17":
-  version: 1.0.17
-  resolution: "@availity/mui-spaces@npm:1.0.17"
+"@availity/mui-spaces@npm:1.0.29":
+  version: 1.0.29
+  resolution: "@availity/mui-spaces@npm:1.0.29"
   dependencies:
-    "@availity/api-axios": "npm:^10.0.3"
-    "@availity/hooks": "npm:^5.1.3"
-    "@availity/message-core": "npm:^7.0.5"
-    "@availity/native-form": "npm:^6.0.11"
-    "@availity/resolve-url": "npm:^3.0.3"
+    "@availity/api-axios": "npm:^11.0.0"
+    "@availity/hooks": "npm:^5.1.5"
+    "@availity/message-core": "npm:^8.0.0"
+    "@availity/native-form": "npm:^7.0.1"
+    "@availity/resolve-url": "npm:^4.0.0"
     "@tanstack/react-query": "npm:^4.36.1"
     dayjs: "npm:^1.11.13"
     qs: "npm:^6.14.0"
@@ -685,49 +686,49 @@ __metadata:
     react-markdown: "npm:^6.0.3"
   peerDependencies:
     "@availity/mui-button": ^1.1.4
-    "@availity/mui-card": ^1.0.11
-    "@availity/mui-chip": ^1.0.3
-    "@availity/mui-dialog": ^1.0.13
+    "@availity/mui-card": ^1.0.12
+    "@availity/mui-chip": ^1.0.4
+    "@availity/mui-dialog": ^1.0.15
     "@availity/mui-disclaimer": ^1.0.5
-    "@availity/mui-favorites": ^1.1.4
+    "@availity/mui-favorites": ^1.1.6
     "@availity/mui-icon": ^1.1.0
     "@availity/mui-layout": ^1.0.2
-    "@availity/mui-list": ^1.0.6
-    "@availity/mui-modal": ^1.0.11
+    "@availity/mui-list": ^1.0.7
+    "@availity/mui-modal": ^1.0.12
     "@availity/mui-progress": ^1.0.3
     "@availity/mui-typography": ^1.0.2
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
     react-router-dom: ^6.26.0
-  checksum: 10c0/8c6a1dc72d2649670bd5c7b0326acc9f801380aa726f84d3fadf6a0d332f1b2c3795e28350a1f039605e8e5b15f055b43f7a1264623b280a17b25d919127faca
+  checksum: 10c0/bb439dbd3fa42806565be13330efa27684183af8dd0851c561e96fbbf3142ef52efaecc20532ff54891863c758d64f53e3a5cdbdf4b0a31281f8fc1b3d04b871
   languageName: node
   linkType: hard
 
-"@availity/mui-stepper@npm:1.0.6":
-  version: 1.0.6
-  resolution: "@availity/mui-stepper@npm:1.0.6"
+"@availity/mui-stepper@npm:1.0.7":
+  version: 1.0.7
+  resolution: "@availity/mui-stepper@npm:1.0.7"
   dependencies:
     "@availity/mui-icon": "npm:^1.1.0"
     "@availity/mui-typography": "npm:^1.0.2"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/12fa8a15423a3d8e4216e7b91b82f7125533dfb8ca4ea62007d61f4368716958ce04c3d019226d9f4b801d584d9cf22930097bdc588122b6a40aeecc652106e6
+  checksum: 10c0/a23da359d008e80e3f906d479227322c6fac2596f9145354bd4c6817fc045caea0552a351baeafdff6b0771de6d80cfc51bfa0f3ee2ffce59b50d9cbefcf74ee
   languageName: node
   linkType: hard
 
-"@availity/mui-table@npm:1.0.16":
-  version: 1.0.16
-  resolution: "@availity/mui-table@npm:1.0.16"
+"@availity/mui-table@npm:1.0.19":
+  version: 1.0.19
+  resolution: "@availity/mui-table@npm:1.0.19"
   dependencies:
-    "@availity/mui-form-utils": "npm:1.3.1"
+    "@availity/mui-form-utils": "npm:1.3.2"
     "@availity/mui-icon": "npm:1.1.0"
-    "@availity/mui-pagination": "npm:1.0.8"
+    "@availity/mui-pagination": "npm:1.0.10"
     "@availity/mui-utils": "npm:1.0.2"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/0343e9680d22cabafcb046556337762c9694eee7a79008c55f3e4accfbeef858e92f263f762ab0a1b30a9c1634fe077b8490b21e66b67eea9d49986e1d1758c2
+  checksum: 10c0/bd69813022f2732deb6ec3362cc0c5fbefc0c0ddcc7da56f528d9c42ed2b7e5670cc9a372816495489606e2d4c7578070889e137176fcd0f8f28ede352082b68
   languageName: node
   linkType: hard
 
@@ -743,16 +744,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/mui-textfield@npm:1.2.4, @availity/mui-textfield@npm:^1.2.4":
-  version: 1.2.4
-  resolution: "@availity/mui-textfield@npm:1.2.4"
+"@availity/mui-textfield@npm:1.3.1, @availity/mui-textfield@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@availity/mui-textfield@npm:1.3.1"
   dependencies:
-    "@availity/mui-form-utils": "npm:1.3.1"
+    "@availity/mui-form-utils": "npm:1.3.2"
     "@availity/mui-icon": "npm:1.1.0"
   peerDependencies:
     "@mui/material": ^6.4.5
     react: ">=16.3.0"
-  checksum: 10c0/3af5919a7c432b5c40c0e76be132ca89355da6458460dd061dd82317051112834dc6988575888903406fe9552e513016c8bbd56782fe20dc7ff5ff139131a51e
+  checksum: 10c0/050d2089465a96ceb7183bed1835e1964305a47ce6538d55870f19075133c74f70d126d101f5ae08b48ede0646b149d257bcaaa859b46bcd7aae0e994750664b
   languageName: node
   linkType: hard
 
@@ -819,27 +820,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/native-form@npm:^6.0.11":
-  version: 6.0.11
-  resolution: "@availity/native-form@npm:6.0.11"
+"@availity/native-form@npm:^7.0.1":
+  version: 7.0.2
+  resolution: "@availity/native-form@npm:7.0.2"
   dependencies:
-    "@availity/api-axios": "npm:10.0.3"
-  checksum: 10c0/880e78d1d107dba677dcc55f3ff1eaa6573bf6d0894d30f4e74e3c8603788f9813daf96a52d3dc6cf0c63f155694f021ba43063c56245197779dc39e78587488
+    "@availity/api-axios": "npm:11.1.0"
+  checksum: 10c0/5ecff120001642f093d234c4437637fc039fb1628b38e1cbc9d97b5566c6c46831dc408f4009b3c7661e8bb5e3c46cc30244d46bd227cab6e66bd7fe4c3354ea
   languageName: node
   linkType: hard
 
-"@availity/resolve-url@npm:3.0.3, @availity/resolve-url@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@availity/resolve-url@npm:3.0.3"
-  checksum: 10c0/d26225cbb2cfd66380358850bee0c48169ac8519ba1911f1c45767a693fd409a7c5a27d62ddf81ba833dd8939fec97774def16ea6b9f957255a8f19fee5b3756
+"@availity/resolve-url@npm:4.0.0, @availity/resolve-url@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@availity/resolve-url@npm:4.0.0"
+  checksum: 10c0/b08a48d6dc485710099ea294d27bece2b3433afa774b5b90577a0e5ea704e442e34d19634a288a507f7b642341356ea2174dcd0ba39ef5f309b261f81e343de7
   languageName: node
   linkType: hard
 
-"@availity/theme-provider@npm:1.0.14":
-  version: 1.0.14
-  resolution: "@availity/theme-provider@npm:1.0.14"
+"@availity/theme-provider@npm:1.0.17":
+  version: 1.0.17
+  resolution: "@availity/theme-provider@npm:1.0.17"
   dependencies:
-    "@availity/theme": "npm:1.6.0"
+    "@availity/theme": "npm:1.7.2"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
     "@mui/material": "npm:^6.4.5"
@@ -847,26 +848,26 @@ __metadata:
     dayjs: "npm:^1.11.13"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 10c0/d37290af959e7eb0ea39203607e507d73b0c441bb539ddfc25eef92b8773930344a54d50ba29036a04a07a5ff48df1977692beefbdd4a0aba642d594ade56b09
+  checksum: 10c0/f863327128efa21878154e20e4c00216834cfdc1840f898b09fb73c5ccc725bd289ed37b41dac15faede6a57009675a985676204dccbd73819478ddd97beea22
   languageName: node
   linkType: hard
 
-"@availity/theme@npm:1.6.0":
-  version: 1.6.0
-  resolution: "@availity/theme@npm:1.6.0"
+"@availity/theme@npm:1.7.2":
+  version: 1.7.2
+  resolution: "@availity/theme@npm:1.7.2"
   dependencies:
     "@availity/design-tokens": "npm:1.1.1"
-  checksum: 10c0/5d33cbdc7028b3288ae1b73572afbda7b21022a61ae164175c58bafc69e3efc12019c16a00820e9d9f245f9efa339868eff8cffcedc6544016c9e55dafe1e014
+  checksum: 10c0/311365490154d7955541d63c55e261f025def17acf3ab358f161642e18eca99ba987db3187ce9773335af3b67c97026ec0fb2a417ad4cb12222fc804249b0ed7
   languageName: node
   linkType: hard
 
-"@availity/upload-core@npm:^7.1.1":
-  version: 7.1.1
-  resolution: "@availity/upload-core@npm:7.1.1"
+"@availity/upload-core@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@availity/upload-core@npm:8.0.0"
   dependencies:
-    "@availity/resolve-url": "npm:3.0.3"
-    tus-js-client: "npm:4.2.3"
-  checksum: 10c0/fa0189497f4951bce05560362de5309bb7bdd1dfb1527637c15e641400cdf9b7ae81133eff4f6f138e6daf72c3055de098609b079b130a9e86617bbb80576716
+    "@availity/resolve-url": "npm:4.0.0"
+    tus-js-client: "npm:4.3.1"
+  checksum: 10c0/7e7298ef4bb08267c3230be00200fa07abc052eb5f79c63c3a97969f99fd9b8fdc21a3da769a402dba89fd4df9c595756ee0f59d3b072929d2d7ac0db792f745
   languageName: node
   linkType: hard
 
@@ -970,15 +971,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/yup@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "@availity/yup@npm:6.0.3"
+"@availity/yup@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@availity/yup@npm:7.0.0"
   dependencies:
     lodash: "npm:^4.17.21"
     yup: "npm:^0.32.11"
   peerDependencies:
     moment: ^2.30.1
-  checksum: 10c0/239404dd0d9446814ad742fd9925939a36f6e9b552abb30a08b716ebb01af13ce21e213c208fe67d597430e39d8be02cf825943ea87e57a958c991bd4aeff00e
+  checksum: 10c0/c6091d9595ac6a65f14bf7edf57d6c2896b6bcd83054c90fedb56aadee651c5f36b00a030ae71678f159b473a2ad12ff09f0dda37351fba76bc57485418a57a5
   languageName: node
   linkType: hard
 
@@ -4526,10 +4527,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.19.2":
-  version: 1.19.2
-  resolution: "@remix-run/router@npm:1.19.2"
-  checksum: 10c0/ac7fc813350686705f2c29219e70e1e299d9a8e3b301e9e81f7e84f578c40c6462b590cf0d78863bac40dbc325b68c71ae070f4a1465793d1d1971b619618295
+"@remix-run/router@npm:1.23.0":
+  version: 1.23.0
+  resolution: "@remix-run/router@npm:1.23.0"
+  checksum: 10c0/eaef5cb46a1e413f7d1019a75990808307e08e53a39d4cf69c339432ddc03143d725decef3d6b9b5071b898da07f72a4a57c4e73f787005fcf10162973d8d7d7
   languageName: node
   linkType: hard
 
@@ -4970,12 +4971,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.15.15":
-  version: 22.15.15
-  resolution: "@types/node@npm:22.15.15"
+"@types/node@npm:^22.16.3":
+  version: 22.16.3
+  resolution: "@types/node@npm:22.16.3"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/3b0c12531c9057ddcbe1cdd869ca6c2f3ea753f1cb3de0a482ca70c3d86f0dbb1d28339aecd8a0c133febda4f4355c012ed9be6ab866297fc23db360fa218dde
+  checksum: 10c0/ea6829d0691713e216c15a767f87e412fa0f45c7ed4d49419098d967467e20a5dcdf66fee024e314deab2779f7e5282e1839ee918e845be27f14179247ec947a
   languageName: node
   linkType: hard
 
@@ -5067,13 +5068,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.3.21":
-  version: 18.3.21
-  resolution: "@types/react@npm:18.3.21"
+"@types/react@npm:^18.3.23":
+  version: 18.3.23
+  resolution: "@types/react@npm:18.3.23"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/b33424c62f01ab2404c60abef995e05aa1a696a636bdd77a34ef6c942d171c673b1e451d9dba7f9a169a83c9eef0ddfaf1ba08f6cef542df9404290199a73967
+  checksum: 10c0/49331800b76572eb2992a5c44801dbf8c612a5f99c8f4e4200f06c7de6f3a6e9455c661784a6c5469df96fa45622cb4a9d0982c44e6a0d5719be5f2ef1f545ed
   languageName: node
   linkType: hard
 
@@ -6001,27 +6002,27 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "availity-starter-typescript@workspace:."
   dependencies:
-    "@availity/api-axios": "npm:^10.0.3"
-    "@availity/element": "npm:^1.0.37"
+    "@availity/api-axios": "npm:^11.1.0"
+    "@availity/element": "npm:^1.0.56"
     "@availity/mock-server": "npm:^9.1.0"
     "@availity/workflow": "npm:^12.2.0"
-    "@availity/yup": "npm:^6.0.3"
+    "@availity/yup": "npm:^7.0.0"
     "@hookform/resolvers": "npm:^3.10.0"
     "@tanstack/react-query": "npm:^4.36.1"
     "@testing-library/react": "npm:^14.3.1"
     "@types/jest": "npm:^27.5.2"
-    "@types/node": "npm:^22.15.15"
+    "@types/node": "npm:^22.16.3"
     "@types/query-string": "npm:^6.3.0"
-    "@types/react": "npm:^18.3.21"
+    "@types/react": "npm:^18.3.23"
     "@types/react-dom": "npm:^18.3.7"
-    axios: "npm:^1.9.0"
+    axios: "npm:^1.10.0"
     cross-env: "npm:^7.0.3"
     eslint-config-availity: "npm:^10.0.7"
-    prettier: "npm:^3.5.3"
+    prettier: "npm:^3.6.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
-    react-hook-form: "npm:^7.56.2"
-    react-router-dom: "npm:^6.22.3"
+    react-hook-form: "npm:^7.60.0"
+    react-router-dom: "npm:^6.30.1"
     typescript: "npm:5.5.4"
     yup: "npm:^1.6.1"
   languageName: unknown
@@ -6034,14 +6035,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "axios@npm:1.9.0"
+"axios@npm:^1.10.0":
+  version: 1.10.0
+  resolution: "axios@npm:1.10.0"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/9371a56886c2e43e4ff5647b5c2c3c046ed0a3d13482ef1d0135b994a628c41fbad459796f101c655e62f0c161d03883454474d2e435b2e021b1924d9f24994c
+  checksum: 10c0/2239cb269cc789eac22f5d1aabd58e1a83f8f364c92c2caa97b6f5cbb4ab2903d2e557d9dc670b5813e9bcdebfb149e783fb8ab3e45098635cd2f559b06bd5d8
   languageName: node
   linkType: hard
 
@@ -6988,13 +6989,6 @@ __metadata:
   version: 1.0.6
   resolution: "cookie-signature@npm:1.0.6"
   checksum: 10c0/b36fd0d4e3fef8456915fcf7742e58fbfcc12a17a018e0eb9501c9d5ef6893b596466f03b0564b81af29ff2538fd0aa4b9d54fe5ccbfb4c90ea50ad29fe2d221
-  languageName: node
-  linkType: hard
-
-"cookie@npm:0.6.0":
-  version: 0.6.0
-  resolution: "cookie@npm:0.6.0"
-  checksum: 10c0/f2318b31af7a31b4ddb4a678d024514df5e705f9be5909a192d7f116cfb6d45cbacf96a473fa733faa95050e7cff26e7832bb3ef94751592f1387b71c8956686
   languageName: node
   linkType: hard
 
@@ -8856,46 +8850,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:^4.17.3":
-  version: 4.21.0
-  resolution: "express@npm:4.21.0"
-  dependencies:
-    accepts: "npm:~1.3.8"
-    array-flatten: "npm:1.1.1"
-    body-parser: "npm:1.20.3"
-    content-disposition: "npm:0.5.4"
-    content-type: "npm:~1.0.4"
-    cookie: "npm:0.6.0"
-    cookie-signature: "npm:1.0.6"
-    debug: "npm:2.6.9"
-    depd: "npm:2.0.0"
-    encodeurl: "npm:~2.0.0"
-    escape-html: "npm:~1.0.3"
-    etag: "npm:~1.8.1"
-    finalhandler: "npm:1.3.1"
-    fresh: "npm:0.5.2"
-    http-errors: "npm:2.0.0"
-    merge-descriptors: "npm:1.0.3"
-    methods: "npm:~1.1.2"
-    on-finished: "npm:2.4.1"
-    parseurl: "npm:~1.3.3"
-    path-to-regexp: "npm:0.1.10"
-    proxy-addr: "npm:~2.0.7"
-    qs: "npm:6.13.0"
-    range-parser: "npm:~1.2.1"
-    safe-buffer: "npm:5.2.1"
-    send: "npm:0.19.0"
-    serve-static: "npm:1.16.2"
-    setprototypeof: "npm:1.2.0"
-    statuses: "npm:2.0.1"
-    type-is: "npm:~1.6.18"
-    utils-merge: "npm:1.0.1"
-    vary: "npm:~1.1.2"
-  checksum: 10c0/4cf7ca328f3fdeb720f30ccb2ea7708bfa7d345f9cc460b64a82bf1b2c91e5b5852ba15a9a11b2a165d6089acf83457fc477dc904d59cd71ed34c7a91762c6cc
-  languageName: node
-  linkType: hard
-
-"express@npm:^4.21.2":
+"express@npm:^4.17.3, express@npm:^4.21.2":
   version: 4.21.2
   resolution: "express@npm:4.21.2"
   dependencies:
@@ -9801,8 +9756,8 @@ __metadata:
   linkType: hard
 
 "http-proxy-middleware@npm:^2.0.3":
-  version: 2.0.7
-  resolution: "http-proxy-middleware@npm:2.0.7"
+  version: 2.0.9
+  resolution: "http-proxy-middleware@npm:2.0.9"
   dependencies:
     "@types/http-proxy": "npm:^1.17.8"
     http-proxy: "npm:^1.18.1"
@@ -9814,7 +9769,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/express":
       optional: true
-  checksum: 10c0/8d00a61eb215b83826460b07489d8bb095368ec16e02a9d63e228dcf7524e7c20d61561e5476de1391aecd4ec32ea093279cdc972115b311f8e0a95a24c9e47e
+  checksum: 10c0/8e9032af625f7c9f2f0d318f6cdb14eb725cc16ffe7b4ccccea25cf591fa819bb7c3bb579e0b543e0ae9c73059b505a6d728290c757bff27bae526a6ed11c05e
   languageName: node
   linkType: hard
 
@@ -12691,13 +12646,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"path-to-regexp@npm:0.1.10":
-  version: 0.1.10
-  resolution: "path-to-regexp@npm:0.1.10"
-  checksum: 10c0/34196775b9113ca6df88e94c8d83ba82c0e1a2063dd33bfe2803a980da8d49b91db8104f49d5191b44ea780d46b8670ce2b7f4a5e349b0c48c6779b653f1afe4
-  languageName: node
-  linkType: hard
-
 "path-to-regexp@npm:0.1.12":
   version: 0.1.12
   resolution: "path-to-regexp@npm:0.1.12"
@@ -13571,12 +13519,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "prettier@npm:3.5.3"
+"prettier@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "prettier@npm:3.6.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/3880cb90b9dc0635819ab52ff571518c35bd7f15a6e80a2054c05dbc8a3aa6e74f135519e91197de63705bcb38388ded7e7230e2178432a1468005406238b877
+  checksum: 10c0/488cb2f2b99ec13da1e50074912870217c11edaddedeadc649b1244c749d15ba94e846423d062e2c4c9ae683e2d65f754de28889ba06e697ac4f988d44f45812
   languageName: node
   linkType: hard
 
@@ -13859,12 +13807,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.55.0, react-hook-form@npm:^7.56.2":
-  version: 7.56.2
-  resolution: "react-hook-form@npm:7.56.2"
+"react-hook-form@npm:^7.55.0, react-hook-form@npm:^7.60.0":
+  version: 7.60.0
+  resolution: "react-hook-form@npm:7.60.0"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18 || ^19
-  checksum: 10c0/9eeca7525c5c0b1356670e7cc77687298c7280a31c99bca396596124371467c310cad22f2c10efd9c75b4570d07740ee1c6ad481d59c1b725c7600767f0a35af
+  checksum: 10c0/eb8518d42a074d9e115d4b414bac18ae72708b2d047a9453dcc7588b00df300b32cebf6ecb7f2c8aa534808b3dc54bde4124af95c1e432b6691f9aba07c93b11
   languageName: node
   linkType: hard
 
@@ -13938,27 +13886,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^6.22.3":
-  version: 6.26.2
-  resolution: "react-router-dom@npm:6.26.2"
+"react-router-dom@npm:^6.30.1":
+  version: 6.30.1
+  resolution: "react-router-dom@npm:6.30.1"
   dependencies:
-    "@remix-run/router": "npm:1.19.2"
-    react-router: "npm:6.26.2"
+    "@remix-run/router": "npm:1.23.0"
+    react-router: "npm:6.30.1"
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 10c0/7515128a98eef0a6b2bf354ef9dfefad03556a06be00fa9220eda6526aaada8a42f294911083473d7ced6d7128c3088bd193218bbb3d62593f9f4f7053781c23
+  checksum: 10c0/e9e1297236b0faa864424ad7d51c392fc6e118595d4dad4cd542fd217c479a81601a81c6266d5801f04f9e154de02d3b094fc22ccb544e755c2eb448fab4ec6b
   languageName: node
   linkType: hard
 
-"react-router@npm:6.26.2":
-  version: 6.26.2
-  resolution: "react-router@npm:6.26.2"
+"react-router@npm:6.30.1":
+  version: 6.30.1
+  resolution: "react-router@npm:6.30.1"
   dependencies:
-    "@remix-run/router": "npm:1.19.2"
+    "@remix-run/router": "npm:1.23.0"
   peerDependencies:
     react: ">=16.8"
-  checksum: 10c0/0d15a39b419c99fb5ccad76388bfc4ee2b01323b3b1b694595a9f9ea28e1fbeea25486b5398f5d3d93922f5c6a9aa751b6bb27419488d85279f6ca5ff9e0a6bb
+  checksum: 10c0/0414326f2d8e0c107fb4603cf4066dacba6a1f6f025c6e273f003e177b2f18888aca3de06d9b5522908f0e41de93be1754c37e82aa97b3a269c4742c08e82539
   languageName: node
   linkType: hard
 
@@ -15678,9 +15626,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tus-js-client@npm:4.2.3":
-  version: 4.2.3
-  resolution: "tus-js-client@npm:4.2.3"
+"tus-js-client@npm:4.3.1":
+  version: 4.3.1
+  resolution: "tus-js-client@npm:4.3.1"
   dependencies:
     buffer-from: "npm:^1.1.2"
     combine-errors: "npm:^3.0.3"
@@ -15689,7 +15637,7 @@ __metadata:
     lodash.throttle: "npm:^4.1.1"
     proper-lockfile: "npm:^4.1.2"
     url-parse: "npm:^1.5.7"
-  checksum: 10c0/4cf660f58b7a778eaa8df044d6d816f4613b4e30b36476ed28f3d356ec6ed24207065afb140016a3067571be006c159c87bd2dd861af50736e84b1aee8f87f64
+  checksum: 10c0/db36ec17cff0217f1199b84f355f8aa07abab47d98d003926f67d9bad08e15e77c3ef61f98aa360133f27ad4944cf519170ff5b5eb5b93a8a762c28dd49df59d
   languageName: node
   linkType: hard
 
