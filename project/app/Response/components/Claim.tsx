@@ -3,7 +3,7 @@ import { Grid, Card, CardHeader, CardContent } from '@availity/element';
 import { ResponseField } from './ResponseField';
 
 export const Claim = () => (
-  <Card>
+  <Card sx={{ height: '100%' }}>
     <CardHeader title="Claim Information" />
     <CardContent>
       <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>

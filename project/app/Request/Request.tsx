@@ -1,18 +1,17 @@
 import { useNavigate } from 'react-router-dom';
-import {
-  Button,
-  Paper,
-  TextField,
-  OrganizationAutocomplete,
-  ProviderAutocomplete,
-  Grid,
-  Organization,
-  Provider,
-} from '@availity/element';
+import { Button, Paper, TextField, OrganizationAutocomplete, ProviderAutocomplete, Grid } from '@availity/element';
 import { Controller, useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+type Organization = {
+  customerId: string;
+  id: string;
+};
+type Provider = {
+  id: string;
+  npi: string;
+};
 type FormValues = {
   organization: Organization | null;
   provider: Provider | null;
@@ -26,45 +25,13 @@ const schema: yup.ObjectSchema<FormValues> = yup.object().shape({
     .object({
       customerId: yup.string().required(),
       id: yup.string().required(),
-      name: yup.string().required(),
-      createDate: yup.string().required(),
-      links: yup.object().required(),
     })
-    .required()
+    .required('Organization is required')
     .nullable(),
   provider: yup
     .object({
       id: yup.string().required(),
       npi: yup.string().required(),
-      businessName: yup.string().required(),
-      uiDisplayName: yup.string().required(),
-      atypical: yup.boolean().required(),
-      customerIds: yup.array().required(),
-      roles: yup.array().required(),
-      primaryPhone: yup
-        .object({
-          internationalCellularCode: yup.string().required(),
-          areaCode: yup.string().required(),
-          phoneNumber: yup.string().required(),
-        })
-        .required(),
-      primaryFax: yup
-        .object({
-          internationalCellularCode: yup.string().required(),
-          areaCode: yup.string().required(),
-          phoneNumber: yup.string().required(),
-        })
-        .required(),
-      primaryAddress: yup
-        .object({
-          line1: yup.string().required(),
-          line2: yup.string().required(),
-          city: yup.string().required(),
-          state: yup.string().required(),
-          stateCode: yup.string().required(),
-          zip: yup.object({ code: yup.string().required(), addon: yup.string().required() }),
-        })
-        .required(),
     })
     .nullable(),
   memberId: yup.string().required('Member ID is required'),
@@ -91,8 +58,7 @@ export const Request = () => {
     control,
   } = useForm({ defaultValues: initialValues, resolver: yupResolver(schema) });
 
-  const handleOnSubmit = (values: FormValues) => {
-    console.log('submit', values);
+  const handleOnSubmit = () => {
     navigate('/response');
   };
 
@@ -111,6 +77,8 @@ export const Request = () => {
                   FieldProps={{
                     label: 'Organization',
                     required: true,
+                    error: !!errors.organization,
+                    helperText: errors.organization?.message,
                   }}
                   onChange={(event, value, reason) => {
                     if (reason === 'clear') {

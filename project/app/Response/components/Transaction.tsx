@@ -3,7 +3,7 @@ import { Typography, Card, CardHeader, CardContent, Grid } from '@availity/eleme
 import { ResponseField } from './ResponseField';
 
 export const Transaction = () => (
-  <Card>
+  <Card sx={{ height: '100%' }}>
     <CardHeader title="Transaction Information" />
     <CardContent>
       <Typography variant="caption" sx={{ mr: '1rem' }}>
