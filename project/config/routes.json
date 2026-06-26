@@ -1,5 +1,8 @@
 {
   "/ms/api/availity/internal/spc/web/graphql": {
     "file": "spaces.json"
+  },
+  "cloud/web/appl/user-management/legacy/sdk/platform/v1/users/me": {
+    "file": "me.json"
   }
 }

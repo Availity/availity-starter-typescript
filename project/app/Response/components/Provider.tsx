@@ -3,7 +3,7 @@ import { Card, CardHeader, CardContent, Grid, Accordion, AccordionSummary, Accor
 import { ResponseField } from './ResponseField';
 
 export const Provider = () => (
-  <Card>
+  <Card sx={{ height: '100%' }}>
     <CardHeader title="Provider Information" />
     <CardContent>
       <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>
