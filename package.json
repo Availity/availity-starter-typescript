@@ -42,23 +42,23 @@
     "@availity/yup": "^8.2.0",
     "@hookform/resolvers": "^5.4.0",
     "@tanstack/react-query": "^5.75.5",
-    "axios": "^1.17.0",
+    "axios": "^1.18.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-hook-form": "^7.80.0",
     "react-router-dom": "^6.30.4",
-    "yup": "^1.6.1"
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@availity/mock-server": "11.0.0",
-    "@availity/workflow": "14.0.0",
+    "@availity/workflow": "14.0.1",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^22.20.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "cross-env": "^10.1.0",
-    "eslint-config-availity": "^14.0.0",
-    "prettier": "^3.8.4",
+    "eslint-config-availity": "^15.1.1",
+    "prettier": "^3.9.3",
     "typescript": "5.9.3"
   },
   "prettier": {

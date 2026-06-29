@@ -941,9 +941,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@availity/workflow@npm:14.0.0":
-  version: 14.0.0
-  resolution: "@availity/workflow@npm:14.0.0"
+"@availity/workflow@npm:14.0.1":
+  version: 14.0.1
+  resolution: "@availity/workflow@npm:14.0.1"
   dependencies:
     "@availity/mock-server": "npm:11.0.0"
     "@availity/workflow-logger": "npm:9.0.0"
@@ -973,7 +973,7 @@ __metadata:
     open: "npm:^11.0.0"
     ora: "npm:^9.4.1"
     path-browserify: "npm:^1.0.1"
-    postcss: "npm:^8.5.15"
+    postcss: "npm:^8.5.16"
     postcss-flexbugs-fixes: "npm:^5.0.2"
     postcss-focus: "npm:^7.0.0"
     postcss-loader: "npm:^8.2.1"
@@ -995,13 +995,13 @@ __metadata:
     webpack-notifier: "npm:^1.15.0"
     yargs: "npm:^18.0.0"
   peerDependencies:
-    eslint-config-availity: "*"
+    eslint-config-availity: ^14.0.0 || ^15.0.0
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
   bin:
     av: ./index.js
     workflow: ./index.js
-  checksum: 10c0/825adf76b0ff1b22146b6b8723c836f253848a5213644d4ed2ede567bab2c905de46473d6097ae708746e197742f2cb41fcebbd58a548812da2f726c855295c4
+  checksum: 10c0/12056ffaf7fae76f437a4dce721676fdf7d54f8bacd310f7964da153540be2059c1e0d5538099a413e5d89e80e3cc8ba3471d4b995401f0ee75468fdeb2f8527
   languageName: node
   linkType: hard
 
@@ -5752,7 +5752,7 @@ __metadata:
     "@availity/api-axios": "npm:^13.2.0"
     "@availity/element": "npm:^3.0.1"
     "@availity/mock-server": "npm:11.0.0"
-    "@availity/workflow": "npm:14.0.0"
+    "@availity/workflow": "npm:14.0.1"
     "@availity/yup": "npm:^8.2.0"
     "@hookform/resolvers": "npm:^5.4.0"
     "@tanstack/react-query": "npm:^5.75.5"
@@ -5760,16 +5760,16 @@ __metadata:
     "@types/node": "npm:^22.20.0"
     "@types/react": "npm:^19.2.17"
     "@types/react-dom": "npm:^19.2.3"
-    axios: "npm:^1.17.0"
+    axios: "npm:^1.18.1"
     cross-env: "npm:^10.1.0"
-    eslint-config-availity: "npm:^14.0.0"
-    prettier: "npm:^3.8.4"
+    eslint-config-availity: "npm:^15.1.1"
+    prettier: "npm:^3.9.3"
     react: "npm:^19.2.7"
     react-dom: "npm:^19.2.7"
     react-hook-form: "npm:^7.80.0"
     react-router-dom: "npm:^6.30.4"
     typescript: "npm:5.9.3"
-    yup: "npm:^1.6.1"
+    yup: "npm:^1.7.1"
   languageName: unknown
   linkType: soft
 
@@ -5780,15 +5780,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.17.0":
-  version: 1.18.0
-  resolution: "axios@npm:1.18.0"
+"axios@npm:^1.18.1":
+  version: 1.18.1
+  resolution: "axios@npm:1.18.1"
   dependencies:
     follow-redirects: "npm:^1.16.0"
     form-data: "npm:^4.0.5"
     https-proxy-agent: "npm:^5.0.1"
     proxy-from-env: "npm:^2.1.0"
-  checksum: 10c0/f88aae13fd9dd395dea3053c7299178fee62f436f20424a1d6d79ec11ffb7656ba664b4630defbadab2c387b6ea07e29afb9f28b26d8e0e49d45be766983290d
+  checksum: 10c0/9d9378a3af0d0ad730a52ad9d15ec7201f3926ad6e7e8bbffc5ae21ca2835ad11d1d9598698f5dd9718917486039f55ea1d7dc23d8e44fa827a55cc3262c02fc
   languageName: node
   linkType: hard
 
@@ -7784,9 +7784,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-availity@npm:^14.0.0":
-  version: 14.0.0
-  resolution: "eslint-config-availity@npm:14.0.0"
+"eslint-config-availity@npm:^15.1.1":
+  version: 15.1.1
+  resolution: "eslint-config-availity@npm:15.1.1"
   dependencies:
     "@eslint/compat": "npm:^2.1.0"
     "@eslint/eslintrc": "npm:^3.3.5"
@@ -7810,7 +7810,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/02af4b8067d2a78b3e1d4e89ba8eef0c489819ed9aeff66fb3c10f2236f26b556dc06a118ab63fce21d371f3f7f50f601be2acc394664542f5cbda578fcf64a7
+  checksum: 10c0/43b7bd6e8c3f8de3d845c346774c7adf1ba152d52f173ab78de1c5f4a9bc0a32353da350c502e14c53481349ddabb8626b005f632edd99de678bfea93153ad0d
   languageName: node
   linkType: hard
 
@@ -12502,6 +12502,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss@npm:^8.5.16":
+  version: 8.5.16
+  resolution: "postcss@npm:8.5.16"
+  dependencies:
+    nanoid: "npm:^3.3.12"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10c0/625de7a02f662f3a340964d14b487bd5097adf16f5f171e257d19005ba37aea8768ee446557500e88e91ca46b4d14d6cb4a0bf033c6ec0c8c0b660d85719f1ef
+  languageName: node
+  linkType: hard
+
 "powershell-utils@npm:^0.1.0":
   version: 0.1.0
   resolution: "powershell-utils@npm:0.1.0"
@@ -12516,12 +12527,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.8.4":
-  version: 3.8.4
-  resolution: "prettier@npm:3.8.4"
+"prettier@npm:^3.9.3":
+  version: 3.9.3
+  resolution: "prettier@npm:3.9.3"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/b90a0cbe75b88ac0af9c13fe0f359bd19926fabccd88483227b21f71f0c1cc42da056fc1ac3a361e665577c568371d5ccfb2c62c31c8a1186f8d1bd531a063e9
+  checksum: 10c0/56623a03f0a1a791413b76458dbcab1dff8e5a7d02744be98ccc589a3a8cf8371dda8fba68f2d2336ded8475ed40f6eaf66f0f4d39df33235656018f64d2fdac
   languageName: node
   linkType: hard
 
@@ -15469,18 +15480,6 @@ __metadata:
   version: 2.1.2
   resolution: "yoctocolors@npm:2.1.2"
   checksum: 10c0/b220f30f53ebc2167330c3adc86a3c7f158bcba0236f6c67e25644c3188e2571a6014ffc1321943bb619460259d3d27eb4c9cc58c2d884c1b195805883ec7066
-  languageName: node
-  linkType: hard
-
-"yup@npm:^1.6.1":
-  version: 1.6.1
-  resolution: "yup@npm:1.6.1"
-  dependencies:
-    property-expr: "npm:^2.0.5"
-    tiny-case: "npm:^1.0.3"
-    toposort: "npm:^2.0.2"
-    type-fest: "npm:^2.19.0"
-  checksum: 10c0/84c2b53996e8001041239cf2719851719f67063ec7cd843067df73562353216f5ad4f8a222319696882d5a6058e528fade1e463c59d70cbffb41b99cd0d7571b
   languageName: node
   linkType: hard
 
