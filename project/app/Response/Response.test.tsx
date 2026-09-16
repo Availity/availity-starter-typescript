@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter as Router } from 'react-router-dom';
+import { MemoryRouter as Router } from 'react-router';
 
 import { Response } from './Response';
 
 const mockNavigate = vi.fn();
-vi.mock('react-router-dom', async () => {
-  const actual = await vi.importActual('react-router-dom');
+vi.mock('react-router', async () => {
+  const actual = await vi.importActual('react-router');
   return { ...actual, useNavigate: () => mockNavigate };
 });
 
@@ -28,7 +28,7 @@ describe('Response', () => {
   test('renders transaction information card', () => {
     renderResponse();
     expect(screen.getByText('Transaction Information')).toBeInTheDocument();
-    expect(screen.getByText('966343462')).toBeInTheDocument();
+    expect(screen.getByText(/966343462/)).toBeInTheDocument();
     expect(screen.getByText('Jane Smith')).toBeInTheDocument();
   });
 

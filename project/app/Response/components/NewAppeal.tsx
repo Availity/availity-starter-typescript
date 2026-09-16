@@ -1,5 +1,5 @@
 import { Button } from '@availity/element';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 export const NewAppeal = () => {
   const navigate = useNavigate();

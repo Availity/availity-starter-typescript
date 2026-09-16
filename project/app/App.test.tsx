@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter as Router } from 'react-router-dom';
+import { MemoryRouter as Router } from 'react-router';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import App from './App';
@@ -19,7 +19,11 @@ vi.mock('@availity/element', async () => {
           id="org-mock"
           data-testid="organization-autocomplete"
           onChange={(e) =>
-            onChange?.(e, { customerId: '1234', id: '1', name: 'Test Org', createDate: '2024-01-01', links: {} }, 'selectOption')
+            onChange?.(
+              e,
+              { customerId: '1234', id: '1', name: 'Test Org', createDate: '2024-01-01', links: {} },
+              'selectOption'
+            )
           }
         />
         <button
@@ -68,8 +72,7 @@ vi.mock('@availity/element', async () => {
   };
 });
 
-const createQueryClient = () =>
-  new QueryClient({ defaultOptions: { queries: { retry: false } } });
+const createQueryClient = () => new QueryClient({ defaultOptions: { queries: { retry: false } } });
 
 const renderApp = (route = '/') =>
   render(
