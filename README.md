@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-**Prerequisites:** Node.js 22+ (see `.nvmrc`)
+**Prerequisites:** Node.js 22+ or 24+ (see `.nvmrc`)
 
 ```bash
 yarn        # install dependencies
@@ -13,18 +13,18 @@ yarn start  # start dev server (opens with spaceId context)
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `yarn start` | Start development server |
-| `yarn build` | Build for default environment |
-| `yarn build:production` | Production build |
-| `yarn build:staging` | Staging build |
-| `yarn test` | Run tests |
-| `yarn test:watch` | Run tests in watch mode |
-| `yarn test:coverage` | Run tests with coverage |
-| `yarn lint` | Lint the project |
-| `yarn format` | Format code with Prettier |
-| `yarn format:check` | Check formatting |
+| Command                 | Description                   |
+| ----------------------- | ----------------------------- |
+| `yarn start`            | Start development server      |
+| `yarn build`            | Build for default environment |
+| `yarn build:production` | Production build              |
+| `yarn build:staging`    | Staging build                 |
+| `yarn test`             | Run tests                     |
+| `yarn test:watch`       | Run tests in watch mode       |
+| `yarn test:coverage`    | Run tests with coverage       |
+| `yarn lint`             | Lint the project              |
+| `yarn format`           | Format code with Prettier     |
+| `yarn format:check`     | Check formatting              |
 
 ## Project Structure
 
@@ -36,10 +36,11 @@ project/
 │   ├── App.test.tsx       # Integration tests for the app
 │   ├── Request/           # Form page (request submission)
 │   ├── Response/          # Confirmation page (submission result)
-│   └── components/        # Shared components (Footer)
+│   ├── components/        # Shared components (Footer, ErrorBoundary)
+│   └── static/            # Static assets
 ├── config/
 │   ├── workflow.js        # @availity/workflow configuration
-│   └── routes.json       # Mock server route mappings
+│   └── routes.json        # Mock server route mappings
 └── data/
     ├── me.json            # Mock user data
     └── spaces.json        # Mock spaces data
@@ -58,6 +59,7 @@ The app is wrapped in `<ThemeProvider>` from Element for consistent styling.
 Forms use [React Hook Form](https://react-hook-form.com/) with [`@hookform/resolvers`](https://github.com/react-hook-form/resolvers) for validation integration. Schema validation is handled by [Yup](https://github.com/jquense/yup) with [`@availity/yup`](https://github.com/Availity/sdk-js/tree/master/packages/yup) for Availity-specific validators.
 
 Pattern:
+
 1. Define a TypeScript type for form values
 2. Define a Yup schema matching that type
 3. Pass the schema to `useForm` via `yupResolver`
@@ -69,7 +71,7 @@ Server state is managed with [`@tanstack/react-query`](https://tanstack.com/quer
 
 ### Routing — React Router (HashRouter)
 
-Client-side routing uses [`react-router-dom`](https://reactrouter.com/) with `HashRouter` (required for Availity Portal embedding). The `spaceId` query parameter is read from the URL for Spaces context.
+Client-side routing uses [`react-router`](https://reactrouter.com/) with `HashRouter` (required for Availity Portal embedding). The `spaceId` query parameter is read from the URL for Spaces context.
 
 ### Spaces
 
@@ -77,7 +79,7 @@ The app uses [`Spaces`](https://availity.github.io/availity-react/) to load appl
 
 ### Build & Dev Tooling — @availity/workflow
 
-[`@availity/workflow`](https://availity.github.io/availity-workflow/) handles the build pipeline (Vite under the hood), dev server, testing (Vitest), and linting. Configuration lives in `project/config/workflow.js`.
+[`@availity/workflow`](https://availity.github.io/availity-workflow/) handles the build pipeline (webpack + esbuild), dev server, testing (Vitest), and linting. Configuration lives in `project/config/workflow.js`.
 
 ### Mock Server
 

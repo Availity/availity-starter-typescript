@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import { HashRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router';
 import { ThemeProvider } from '@availity/element';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
@@ -13,7 +13,7 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
-      staleTime: Number.POSITIVE_INFINITY,
+      staleTime: 5 * 60 * 1000,
     },
   },
 });

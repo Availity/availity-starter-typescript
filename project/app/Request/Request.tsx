@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Button, Paper, TextField, OrganizationAutocomplete, ProviderAutocomplete, Grid } from '@availity/element';
 import { Controller, useForm } from 'react-hook-form';
 import * as yup from 'yup';
@@ -83,6 +83,7 @@ export const Request = () => {
                   onChange={(event, value, reason) => {
                     if (reason === 'clear') {
                       onChange(null);
+                      return;
                     }
                     onChange(value);
                   }}
@@ -103,6 +104,7 @@ export const Request = () => {
                   onChange={(event, value, reason) => {
                     if (reason === 'clear') {
                       onChange(null);
+                      return;
                     }
                     onChange(value);
                   }}

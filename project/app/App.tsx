@@ -1,9 +1,9 @@
-import { Routes, Route, useSearchParams } from 'react-router-dom';
+import { Routes, Route, useSearchParams } from 'react-router';
 import { Container, PageHeader, Spaces } from '@availity/element';
 
-import { Request } from './Request';
-import { Response } from './Response';
-import { Footer } from './components';
+import { Request } from '@/Request';
+import { Response } from '@/Response';
+import { ErrorBoundary, Footer } from '@/components';
 
 const App = () => {
   const [searchParams] = useSearchParams();
@@ -18,10 +18,12 @@ const App = () => {
           help={{ helpAppName: 'Appeal Request Form', url: 'https://design.availity.com' }}
         />
         <Container>
-          <Routes>
-            <Route path="/" element={<Request />} />
-            <Route path="/response" element={<Response />} />
-          </Routes>
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<Request />} />
+              <Route path="/response" element={<Response />} />
+            </Routes>
+          </ErrorBoundary>
           <Footer />
         </Container>
       </Spaces>
