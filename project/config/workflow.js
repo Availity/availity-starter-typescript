@@ -6,7 +6,6 @@ export default (config) => {
   // Coverage configuration — enabled automatically when --coverage flag is passed
   config.development.vitestOverrides = {
     ...config.development.vitestOverrides,
-    setupFiles: ['project/app/vitest.setup.ts'],
     coverage: {
       provider: 'istanbul',
       include: ['project/app/**/*.{ts,tsx}'],
