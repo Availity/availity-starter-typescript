@@ -3,7 +3,7 @@ import { Container, PageHeader, Spaces } from '@availity/element';
 
 import { Request } from '@/Request';
 import { Response } from '@/Response';
-import { ErrorBoundary, Footer } from '@/components';
+import { CurrentUser, ErrorBoundary, Footer } from '@/components';
 
 const App = () => {
   const [searchParams] = useSearchParams();
@@ -18,6 +18,7 @@ const App = () => {
           help={{ helpAppName: 'Appeal Request Form', url: 'https://design.availity.com' }}
         />
         <Container>
+          <CurrentUser />
           <ErrorBoundary>
             <Routes>
               <Route path="/" element={<Request />} />
