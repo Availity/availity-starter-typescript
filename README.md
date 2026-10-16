@@ -1,103 +1,113 @@
-# Availity Starter Typescript
+# Availity Starter TypeScript
 
-> Template project for React web apps on the Availity Portal using TypeScript
+> Template project for React web apps on the Availity Portal, using TypeScript and [@availity/workflow](https://github.com/Availity/availity-workflow) (webpack).
+
+This is the TypeScript starter. It uses `@availity/workflow`, which builds with webpack and `esbuild-loader`. For the Vite-based template, see [availity-starter-vite-typescript](https://github.com/Availity/availity-starter-vite-typescript). For plain JavaScript with type checking, see [availity-starter-react](https://github.com/Availity/availity-starter-react).
 
 ## Getting Started
 
-**Prerequisites:** Node.js 22+ or 24+ (see `.nvmrc`)
+Requires Node.js 22 or 24 and Yarn 4.
 
 ```bash
-yarn        # install dependencies
-yarn start  # start dev server (opens with spaceId context)
+yarn            # install dependencies
+yarn start      # start the dev server at http://localhost:3000
 ```
+
+Open `http://localhost:3000/#/?spaceId=48C607A70B5A46A3864A34E2BDDDEA04` to load the sample space. The page shows "Signed in as Jane Smith", which comes from the mock `users/me` response.
+
+## What's Included
+
+This starter is a small, working Availity app. It covers the features most apps need, so you can replace the sample content with your own.
+
+- **App shell:** Element `ThemeProvider`, `QueryClientProvider`, a hash router, `Spaces` (reads `spaceId` from the URL), `PageHeader`, and a footer.
+- **Request form:** react-hook-form with Yup validation. Submitting runs a `useMutation` and passes the result to the response page through router state.
+- **Response page:** shows the submission details.
+- **Current user:** `useCurrentUser` calls `avUserApi.me()` inside `useQuery`. The `CurrentUser` component shows the name, a loading state, or an error.
+- **Error boundary:** catches render errors and offers a "Try Again" button.
+- **Mock API:** the dev server serves mock responses for `users/me` and the spaces query, so the app runs without a backend.
+- **Tests:** Vitest and Testing Library cover the app shell, validation, navigation, the hook, and the components.
 
 ## Scripts
 
-| Command                 | Description                   |
-| ----------------------- | ----------------------------- |
-| `yarn start`            | Start development server      |
-| `yarn build`            | Build for default environment |
-| `yarn build:production` | Production build              |
-| `yarn build:staging`    | Staging build                 |
-| `yarn test`             | Run tests                     |
-| `yarn test:watch`       | Run tests in watch mode       |
-| `yarn test:coverage`    | Run tests with coverage       |
-| `yarn lint`             | Lint the project              |
-| `yarn format`           | Format code with Prettier     |
-| `yarn format:check`     | Check formatting              |
+| Script                  | Description                       |
+| ----------------------- | --------------------------------- |
+| `yarn start`            | Start the development server      |
+| `yarn build`            | Build for development             |
+| `yarn build:production` | Build for production              |
+| `yarn build:staging`    | Build for staging                 |
+| `yarn test`             | Run tests once                    |
+| `yarn test:watch`       | Run tests in watch mode           |
+| `yarn test:coverage`    | Run tests with coverage           |
+| `yarn lint`             | Lint source files with ESLint     |
+| `yarn format`           | Format files with Prettier        |
+| `yarn format:check`     | Check formatting without changing |
+| `yarn typecheck`        | Type-check with `tsc --noEmit`    |
 
 ## Project Structure
 
 ```
 project/
 ├── app/
-│   ├── index.tsx          # App entry — providers (Theme, QueryClient, Router)
-│   ├── App.tsx            # Root component — routing and layout
-│   ├── App.test.tsx       # Integration tests for the app
-│   ├── Request/           # Form page (request submission)
-│   ├── Response/          # Confirmation page (submission result)
-│   ├── components/        # Shared components (CurrentUser, Footer, ErrorBoundary)
-│   └── hooks/             # Custom hooks (useCurrentUser, useSubmitRequest)
+│   ├── index.tsx            # Entry: providers (Theme, QueryClient, Router)
+│   ├── App.tsx              # Root component: Spaces, PageHeader, routes
+│   ├── App.test.tsx         # App-level tests
+│   ├── Request/               # Request form page and its tests
+│   ├── Response/              # Response page and its tests
+│   ├── components/            # Shared components (CurrentUser, ErrorBoundary, Footer)
+│   └── hooks/                 # Custom hooks (useCurrentUser, useSubmitRequest)
 ├── config/
-│   ├── workflow.js        # @availity/workflow configuration
-│   └── routes.json        # Mock server route mappings
+│   ├── workflow.js            # Workflow configuration (title, dev server, coverage)
+│   └── routes.json            # Mock server route mappings
 └── data/
-    ├── me.json            # Mock user data
-    └── spaces.json        # Mock spaces data
+    ├── me.json                # Mock response for users/me
+    └── spaces.json            # Mock response for the spaces query
 ```
 
-## Patterns & Architecture
+To add a feature, create a folder under `project/app/` with an `index` file that re-exports the page, plus its tests. Then add a route in `App.tsx`.
 
-### UI Components — Availity Element
+## Patterns
 
-All UI is built with [`@availity/element`](https://availity.github.io/element/?path=/docs/element--docs), Availity's MUI-based component library. Components used include `Container`, `PageHeader`, `Spaces`, `Paper`, `Grid`, `TextField`, `Button`, `Alert`, `Card`, and `Stack`.
+### Data fetching: reads and writes
 
-The app is wrapped in `<ThemeProvider>` from Element for consistent styling.
+Use `useQuery` for reads and `useMutation` for writes. `useCurrentUser` is a read:
 
-### Forms — React Hook Form + Yup
+```tsx
+export const useCurrentUser = () =>
+  useQuery({
+    queryKey: ['currentUser'],
+    queryFn: () => avUserApi.me(),
+  });
+```
 
-Forms use [React Hook Form](https://react-hook-form.com/) with [`@hookform/resolvers`](https://github.com/react-hook-form/resolvers) for validation integration. Schema validation is handled by [Yup](https://github.com/jquense/yup).
+`useSubmitRequest` is a write. Its body is a placeholder: replace it with a real `@availity/api-axios` call. The form calls `mutateAsync` and waits for the result before it navigates.
 
-Pattern:
+### Forms
 
-1. Define a TypeScript type for form values
-2. Define a Yup schema matching that type
-3. Pass the schema to `useForm` via `yupResolver`
-4. Use `register` for simple fields, `Controller` for complex components
+Forms use react-hook-form with `yupResolver`. Define the schema next to the form, and use `register` for plain inputs. See `Request/Request.tsx`.
 
-### Data Fetching — TanStack Query + Axios
+### Mock data
 
-Server state is managed with [`@tanstack/react-query`](https://tanstack.com/query). HTTP calls use [`@availity/api-axios`](https://availity.github.io/sdk-js/), which provides pre-configured API classes for Availity platform endpoints. `useCurrentUser` calls `avUserApi.me()` inside `useQuery`, and `useSubmitRequest` is a `useMutation` example.
+`project/config/routes.json` maps an API path to a file in `project/data/`. The mock server (ekko) serves that file. To mock a new endpoint, add the path and the JSON file. The path must match the one the SDK calls. For example, `avUserApi` calls `cloud/web/appl/user-management/legacy/sdk/platform/v1/users/me`.
 
-### Routing — React Router (HashRouter)
+### Routing and Spaces
 
-Client-side routing uses [`react-router`](https://reactrouter.com/) with `HashRouter` (required for Availity Portal embedding). The `spaceId` query parameter is read from the URL for Spaces context.
+Routing uses `HashRouter`, which the Availity Portal needs for embedded apps. Don't switch to `BrowserRouter` without talking to the platform team first, because the gateway would need changes. `Spaces` reads `spaceId` from the URL.
 
-### Spaces
+## Configuration
 
-The app uses [`Spaces`](https://availity.github.io/availity-react/) to load application metadata from the Availity platform using the `spaceId` parameter.
-
-### Build & Dev Tooling — @availity/workflow
-
-[`@availity/workflow`](https://availity.github.io/availity-workflow/) handles the build pipeline (webpack + esbuild), dev server, testing (Vitest), and linting. Configuration lives in `project/config/workflow.js`.
-
-### Mock Server
-
-[`@availity/mock-server`](https://github.com/Availity/availity-workflow/tree/master/packages/mock-server) serves mock API responses during development. Routes are defined in `project/config/routes.json` and data files live in `project/data/`.
-
-### Linting & Formatting
-
-- ESLint via [`eslint-config-availity`](https://github.com/Availity/eslint-config-availity) (flat config format)
-- Prettier with project-level config in `package.json` (120 print width, single quotes, ES5 trailing commas)
-
-### TypeScript
-
-Strict mode enabled. Path alias `@/*` maps to `./project/app/*`.
+| File                         | Purpose                                                                                 |
+| ---------------------------- | --------------------------------------------------------------------------------------- |
+| `project/config/workflow.js` | App title, dev server, and coverage. Uses the webpack `@availity/workflow` config type. |
+| `project/config/routes.json` | Mock server routes                                                                      |
+| `eslint.config.js`           | ESLint flat config (`eslint-config-availity`)                                           |
+| `tsconfig.json`              | TypeScript settings. Strict mode is on. `@/*` maps to `project/app/*`.                  |
+| `package.json`               | Scripts, dependencies, Prettier config                                                  |
 
 ## Resources
 
-- [Availity Element (Component Library)](https://availity.github.io/element/?path=/docs/element--docs)
+- [Availity Docs Hub](https://availity.github.io/)
+- [Availity Element (component library)](https://availity.github.io/element/)
 - [Availity Workflow](https://availity.github.io/availity-workflow/)
-- [Availity React Components](https://availity.github.io/availity-react/)
 - [Availity JavaScript SDK](https://availity.github.io/sdk-js/)
-- [Availity GitHub](https://github.com/Availity)
+- [TanStack Query](https://tanstack.com/query)
+- [React Router](https://reactrouter.com/)
