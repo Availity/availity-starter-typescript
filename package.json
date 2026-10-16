@@ -10,7 +10,6 @@
   ],
   "homepage": "https://github.com/availity/availity-workflow#readme",
   "license": "MIT",
-  "main": "project/app/index.tsx",
   "scripts": {
     "av": "av",
     "about": "av about",
@@ -30,8 +29,7 @@
     "test": "av test",
     "test:coverage": "av test --coverage",
     "test:watch": "av test --watch",
-    "typecheck": "tsc --noEmit",
-    "upgrade:workflow": "./node_modules/.bin/upgrade-workflow"
+    "typecheck": "tsc --noEmit"
   },
   "type": "module",
   "engines": {
@@ -40,7 +38,6 @@
   "dependencies": {
     "@availity/api-axios": "^13.3.5",
     "@availity/element": "^3.0.7",
-    "@availity/yup": "^8.3.2",
     "@hookform/resolvers": "^5.9.1",
     "@tanstack/react-query": "^5.75.5",
     "axios": "^1.20.0",

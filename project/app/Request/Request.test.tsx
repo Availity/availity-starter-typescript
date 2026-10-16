@@ -11,36 +11,6 @@ vi.mock('react-router', async () => {
   return { ...actual, useNavigate: () => mockNavigate };
 });
 
-vi.mock('@availity/element', async () => {
-  const actual = await vi.importActual('@availity/element');
-  return {
-    ...actual,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    OrganizationAutocomplete: ({ FieldProps, onChange }: any) => (
-      <div>
-        <label htmlFor="org-mock">{FieldProps?.label}</label>
-        <input
-          id="org-mock"
-          data-testid="organization-autocomplete"
-          onChange={(e) => onChange?.(e, { customerId: '1234', id: '1' }, 'selectOption')}
-        />
-        {FieldProps?.error && <span>{FieldProps.helperText}</span>}
-      </div>
-    ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ProviderAutocomplete: ({ FieldProps, onChange }: any) => (
-      <div>
-        <label htmlFor="prov-mock">{FieldProps?.label}</label>
-        <input
-          id="prov-mock"
-          data-testid="provider-autocomplete"
-          onChange={(e) => onChange?.(e, { id: '1', npi: '1234567890' }, 'selectOption')}
-        />
-      </div>
-    ),
-  };
-});
-
 const renderRequest = () =>
   render(
     <QueryClientProvider client={new QueryClient({ defaultOptions: { queries: { retry: false } } })}>
@@ -55,70 +25,48 @@ describe('Request', () => {
 
   test('renders all form fields', () => {
     renderRequest();
-    expect(screen.getByRole('textbox', { name: /member id/i })).toBeInTheDocument();
-    expect(screen.getByRole('textbox', { name: /claim id/i })).toBeInTheDocument();
-    expect(screen.getByRole('textbox', { name: /more information/i })).toBeInTheDocument();
-    expect(screen.getByTestId('organization-autocomplete')).toBeInTheDocument();
-    expect(screen.getByTestId('provider-autocomplete')).toBeInTheDocument();
+    expect(screen.getByRole('textbox', { name: /name/i })).toBeInTheDocument();
+    expect(screen.getByRole('textbox', { name: /email/i })).toBeInTheDocument();
+    expect(screen.getByRole('textbox', { name: /message/i })).toBeInTheDocument();
   });
 
-  test('renders submit button', () => {
-    renderRequest();
-    expect(screen.getByRole('button', { name: /submit/i })).toBeInTheDocument();
-  });
-
-  test('shows validation errors when submitting empty form', async () => {
+  test('shows validation errors on empty submit', async () => {
     const user = userEvent.setup();
     renderRequest();
 
     await user.click(screen.getByRole('button', { name: /submit/i }));
 
     await waitFor(() => {
-      expect(screen.getByText('Member ID is required')).toBeInTheDocument();
-      expect(screen.getByText('Claim ID is required')).toBeInTheDocument();
+      expect(screen.getByText('Name is required')).toBeInTheDocument();
+      expect(screen.getByText('Email is required')).toBeInTheDocument();
     });
   });
 
-  test('does not navigate when form is invalid', async () => {
+  test('shows email validation error for invalid email', async () => {
     const user = userEvent.setup();
     renderRequest();
 
+    await user.type(screen.getByRole('textbox', { name: /name/i }), 'Jane');
+    await user.type(screen.getByRole('textbox', { name: /email/i }), 'not-an-email');
     await user.click(screen.getByRole('button', { name: /submit/i }));
 
     await waitFor(() => {
-      expect(screen.getByText('Member ID is required')).toBeInTheDocument();
-    });
-    expect(mockNavigate).not.toHaveBeenCalled();
-  });
-
-  test('navigates to /response on valid submission', async () => {
-    const user = userEvent.setup();
-    renderRequest();
-
-    await user.type(screen.getByTestId('organization-autocomplete'), 'Test');
-    await user.type(screen.getByRole('textbox', { name: /member id/i }), 'MEM123');
-    await user.type(screen.getByRole('textbox', { name: /claim id/i }), 'CLM456');
-
-    await user.click(screen.getByRole('button', { name: /submit/i }));
-
-    await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalledWith('/response');
+      expect(screen.getByText('Must be a valid email')).toBeInTheDocument();
     });
   });
 
-  test('allows optional description field', async () => {
+  test('navigates to /response with the submission on valid submit', async () => {
     const user = userEvent.setup();
     renderRequest();
 
-    await user.type(screen.getByTestId('organization-autocomplete'), 'Test');
-    await user.type(screen.getByRole('textbox', { name: /member id/i }), 'MEM123');
-    await user.type(screen.getByRole('textbox', { name: /claim id/i }), 'CLM456');
-    await user.type(screen.getByRole('textbox', { name: /more information/i }), 'Extra details');
-
+    await user.type(screen.getByRole('textbox', { name: /name/i }), 'Jane Smith');
+    await user.type(screen.getByRole('textbox', { name: /email/i }), 'jane@example.com');
     await user.click(screen.getByRole('button', { name: /submit/i }));
 
     await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalledWith('/response');
+      expect(mockNavigate).toHaveBeenCalledWith('/response', {
+        state: { submission: expect.objectContaining({ status: 'Received' }) },
+      });
     });
   });
 });

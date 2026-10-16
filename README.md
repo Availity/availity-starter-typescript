@@ -36,8 +36,8 @@ project/
 │   ├── App.test.tsx       # Integration tests for the app
 │   ├── Request/           # Form page (request submission)
 │   ├── Response/          # Confirmation page (submission result)
-│   ├── components/        # Shared components (Footer, ErrorBoundary)
-│   └── static/            # Static assets
+│   ├── components/        # Shared components (CurrentUser, Footer, ErrorBoundary)
+│   └── hooks/             # Custom hooks (useCurrentUser, useSubmitRequest)
 ├── config/
 │   ├── workflow.js        # @availity/workflow configuration
 │   └── routes.json        # Mock server route mappings
@@ -50,24 +50,24 @@ project/
 
 ### UI Components — Availity Element
 
-All UI is built with [`@availity/element`](https://availity.github.io/element/?path=/docs/element--docs), Availity's MUI-based component library. Components used include `Container`, `PageHeader`, `Paper`, `Grid`, `TextField`, `Button`, `Alert`, `Stack`, and domain-specific autocompletes (`OrganizationAutocomplete`, `ProviderAutocomplete`).
+All UI is built with [`@availity/element`](https://availity.github.io/element/?path=/docs/element--docs), Availity's MUI-based component library. Components used include `Container`, `PageHeader`, `Spaces`, `Paper`, `Grid`, `TextField`, `Button`, `Alert`, `Card`, and `Stack`.
 
 The app is wrapped in `<ThemeProvider>` from Element for consistent styling.
 
 ### Forms — React Hook Form + Yup
 
-Forms use [React Hook Form](https://react-hook-form.com/) with [`@hookform/resolvers`](https://github.com/react-hook-form/resolvers) for validation integration. Schema validation is handled by [Yup](https://github.com/jquense/yup) with [`@availity/yup`](https://github.com/Availity/sdk-js/tree/master/packages/yup) for Availity-specific validators.
+Forms use [React Hook Form](https://react-hook-form.com/) with [`@hookform/resolvers`](https://github.com/react-hook-form/resolvers) for validation integration. Schema validation is handled by [Yup](https://github.com/jquense/yup).
 
 Pattern:
 
 1. Define a TypeScript type for form values
 2. Define a Yup schema matching that type
 3. Pass the schema to `useForm` via `yupResolver`
-4. Use `register` for simple fields, `Controller` for complex components (autocompletes)
+4. Use `register` for simple fields, `Controller` for complex components
 
 ### Data Fetching — TanStack Query + Axios
 
-Server state is managed with [`@tanstack/react-query`](https://tanstack.com/query). HTTP calls use [Axios](https://axios-http.com/) via [`@availity/api-axios`](https://availity.github.io/sdk-js/) which provides pre-configured API classes for Availity platform endpoints.
+Server state is managed with [`@tanstack/react-query`](https://tanstack.com/query). HTTP calls use [`@availity/api-axios`](https://availity.github.io/sdk-js/), which provides pre-configured API classes for Availity platform endpoints. `useCurrentUser` calls `avUserApi.me()` inside `useQuery`, and `useSubmitRequest` is a `useMutation` example.
 
 ### Routing — React Router (HashRouter)
 

@@ -1,72 +1,25 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { MemoryRouter as Router } from 'react-router';
 
 import { Response } from './Response';
 
-const mockNavigate = vi.fn();
-vi.mock('react-router', async () => {
-  const actual = await vi.importActual('react-router');
-  return { ...actual, useNavigate: () => mockNavigate };
-});
-
-const renderResponse = () =>
+const renderResponse = (submission?: object) =>
   render(
-    <Router>
+    <Router initialEntries={[{ pathname: '/response', state: submission ? { submission } : null }]}>
       <Response />
     </Router>
   );
 
 describe('Response', () => {
-  beforeEach(() => mockNavigate.mockClear());
-
-  test('renders success alert', () => {
-    renderResponse();
-    expect(screen.getByText('Your Appeal has been submitted.')).toBeInTheDocument();
+  test('shows the submission details passed through router state', () => {
+    renderResponse({ id: 'REF-ABC123', status: 'Received', submittedAt: '10/16/2026' });
+    expect(screen.getByText('Your request has been submitted.')).toBeInTheDocument();
+    expect(screen.getByText('REF-ABC123')).toBeInTheDocument();
+    expect(screen.getByText('Received')).toBeInTheDocument();
   });
 
-  test('renders transaction information card', () => {
+  test('renders without a submission in router state', () => {
     renderResponse();
-    expect(screen.getByText('Transaction Information')).toBeInTheDocument();
-    expect(screen.getByText(/966343462/)).toBeInTheDocument();
-    expect(screen.getByText('Jane Smith')).toBeInTheDocument();
-  });
-
-  test('renders claim information card', () => {
-    renderResponse();
-    expect(screen.getByText('Claim Information')).toBeInTheDocument();
-    expect(screen.getByText('123456789')).toBeInTheDocument();
-  });
-
-  test('renders appeal information card', () => {
-    renderResponse();
-    expect(screen.getByText('Appeal Information')).toBeInTheDocument();
-    expect(screen.getByText('Timely Filing')).toBeInTheDocument();
-  });
-
-  test('renders provider information card', () => {
-    renderResponse();
-    expect(screen.getByText('Provider Information')).toBeInTheDocument();
-    expect(screen.getByText('Rodriguez, Brandon')).toBeInTheDocument();
-  });
-
-  test('renders payer contact information card', () => {
-    renderResponse();
-    expect(screen.getByText('Payer Contact Information')).toBeInTheDocument();
-    expect(screen.getByText('(800) 955-5682')).toBeInTheDocument();
-  });
-
-  test('renders new appeal button', () => {
-    renderResponse();
-    expect(screen.getByRole('button', { name: /new appeal/i })).toBeInTheDocument();
-  });
-
-  test('new appeal button navigates to home', async () => {
-    const user = userEvent.setup();
-    renderResponse();
-
-    await user.click(screen.getByRole('button', { name: /new appeal/i }));
-
-    expect(mockNavigate).toHaveBeenCalledWith('/');
+    expect(screen.getByRole('button', { name: /new request/i })).toBeInTheDocument();
   });
 });

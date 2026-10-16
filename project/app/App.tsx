@@ -1,9 +1,9 @@
 import { Routes, Route, useSearchParams } from 'react-router';
 import { Container, PageHeader, Spaces } from '@availity/element';
 
+import { CurrentUser, ErrorBoundary, Footer } from '@/components';
 import { Request } from '@/Request';
 import { Response } from '@/Response';
-import { CurrentUser, ErrorBoundary, Footer } from '@/components';
 
 const App = () => {
   const [searchParams] = useSearchParams();
@@ -12,10 +12,11 @@ const App = () => {
   return (
     <Container data-testid="app-container" id="app-container">
       <Spaces spaceIds={[spaceId]} clientId="test">
+        {/* TODO: Replace headerText, breadcrumbs, and help with your app's values */}
         <PageHeader
           breadcrumbs={{ active: 'Request Form' }}
-          headerText="Appeal Request Form"
-          help={{ helpAppName: 'Appeal Request Form', url: 'https://design.availity.com' }}
+          headerText="My Application"
+          help={{ helpAppName: 'My Application', url: 'https://design.availity.com' }}
         />
         <Container>
           <CurrentUser />

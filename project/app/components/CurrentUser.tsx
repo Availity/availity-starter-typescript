@@ -1,6 +1,6 @@
 import { Typography } from '@availity/element';
 
-import { useCurrentUser } from '@/hooks';
+import { useCurrentUser } from '../hooks/useCurrentUser';
 
 export const CurrentUser = () => {
   const { data, isPending, isError } = useCurrentUser();
