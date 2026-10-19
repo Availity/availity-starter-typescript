@@ -1,143 +1,66 @@
 import { useNavigate } from 'react-router';
-import { Button, Paper, TextField, OrganizationAutocomplete, ProviderAutocomplete, Grid } from '@availity/element';
-import { Controller, useForm } from 'react-hook-form';
-import * as yup from 'yup';
+import { Button, Paper, TextField, Grid } from '@availity/element';
+import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 
-type Organization = {
-  customerId: string;
-  id: string;
-};
-type Provider = {
-  id: string;
-  npi: string;
-};
+import { useSubmitRequest, type RequestPayload } from '@/hooks';
+
 type FormValues = {
-  organization: Organization | null;
-  provider: Provider | null;
-  claimId: string;
-  memberId: string;
-  description?: string;
+  name: string;
+  email: string;
+  message?: string;
 };
 
 const schema: yup.ObjectSchema<FormValues> = yup.object().shape({
-  organization: yup
-    .object({
-      customerId: yup.string().required(),
-      id: yup.string().required(),
-    })
-    .required('Organization is required')
-    .nullable(),
-  provider: yup
-    .object({
-      id: yup.string().required(),
-      npi: yup.string().required(),
-    })
-    .nullable(),
-  memberId: yup.string().required('Member ID is required'),
-  claimId: yup.string().required('Claim ID is required'),
-  description: yup.string(),
+  name: yup.string().required('Name is required'),
+  email: yup.string().email('Must be a valid email').required('Email is required'),
+  message: yup.string(),
 });
-
-const initialValues: FormValues = {
-  organization: null,
-  provider: null,
-  memberId: '',
-  claimId: '',
-  description: '',
-};
 
 export const Request = () => {
   const navigate = useNavigate();
+  const { mutateAsync, isPending } = useSubmitRequest();
 
   const {
     handleSubmit,
     register,
     formState: { errors },
-    watch,
-    control,
-  } = useForm({ defaultValues: initialValues, resolver: yupResolver(schema) });
+  } = useForm<FormValues>({ defaultValues: { name: '', email: '', message: '' }, resolver: yupResolver(schema) });
 
-  const handleOnSubmit = () => {
-    navigate('/response');
+  const onSubmit = async (values: RequestPayload) => {
+    const submission = await mutateAsync(values);
+    navigate('/response', { state: { submission } });
   };
-
-  const selectedCustomerId = (watch('organization') as FormValues['organization'])?.customerId || '';
 
   return (
     <Paper sx={{ padding: '1.5rem' }}>
-      <form onSubmit={handleSubmit(handleOnSubmit)}>
-        <Grid container rowSpacing={{ xs: 1, md: 2 }} columnSpacing={{ xs: 2, md: 3 }}>
-          <Grid size={{ md: 6 }}>
-            <Controller
-              name="organization"
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <OrganizationAutocomplete
-                  FieldProps={{
-                    label: 'Organization',
-                    required: true,
-                    error: !!errors.organization,
-                    helperText: errors.organization?.message,
-                  }}
-                  onChange={(event, value, reason) => {
-                    if (reason === 'clear') {
-                      onChange(null);
-                      return;
-                    }
-                    onChange(value);
-                  }}
-                  onBlur={onBlur}
-                  value={value || null}
-                />
-              )}
-            />
-          </Grid>
-          <Grid size={{ md: 6 }}>
-            <Controller
-              name="provider"
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ProviderAutocomplete
-                  FieldProps={{ label: 'Provider' }}
-                  customerId={selectedCustomerId}
-                  onChange={(event, value, reason) => {
-                    if (reason === 'clear') {
-                      onChange(null);
-                      return;
-                    }
-                    onChange(value);
-                  }}
-                  onBlur={onBlur}
-                  value={value || null}
-                />
-              )}
-            />
-          </Grid>
-          <Grid size={{ md: 6 }}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Grid container rowSpacing={2} columnSpacing={3}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField
-              {...register('memberId')}
-              error={!!errors.memberId}
-              helperText={errors.memberId?.message}
-              label="Member ID"
+              {...register('name')}
+              label="Name"
               required
+              error={!!errors.name}
+              helperText={errors.name?.message}
             />
           </Grid>
-          <Grid size={{ md: 6 }}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField
-              {...register('claimId')}
-              error={!!errors.claimId}
-              helperText={errors.claimId?.message}
-              label="Claim ID"
+              {...register('email')}
+              label="Email"
               required
+              error={!!errors.email}
+              helperText={errors.email?.message}
             />
           </Grid>
           <Grid size={{ xs: 12 }}>
-            <TextField {...register('description')} error={!!errors.description} label="More information" multiline />
+            <TextField {...register('message')} label="Message" multiline />
           </Grid>
         </Grid>
-        <Grid container justifyContent="flex-end">
-          <Button type="submit" color="primary">
+        <Grid container justifyContent="flex-end" mt={2}>
+          <Button type="submit" color="primary" disabled={isPending}>
             Submit
           </Button>
         </Grid>

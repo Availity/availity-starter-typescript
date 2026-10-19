@@ -1,6 +1,6 @@
 /** @type {import('@availity/workflow').WorkflowConfigFunction} */
 export default (config) => {
-  config.app.title = 'Appeal Request Form';
+  config.app.title = 'My Application';
   config.development.open = '#/?spaceId=48C607A70B5A46A3864A34E2BDDDEA04';
 
   // Coverage configuration — enabled automatically when --coverage flag is passed

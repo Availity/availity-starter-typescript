@@ -13,6 +13,7 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
+      // Data is considered fresh for 5 minutes. Adjust per your app's needs.
       staleTime: 5 * 60 * 1000,
     },
   },
